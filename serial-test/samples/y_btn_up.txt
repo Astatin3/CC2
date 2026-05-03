@@ -1,0 +1,350 @@
+02:11:29.896573 mcu->host DevicePeriodicStatus len=14 seq=0x1a opcode=0x43 data=UnknownPayload(payload=1b 89 a6 fb 00 81 d7 4d) trailer=cc 07 term=0x7e syscall_len=14
+02:11:29.966652 mcu->host DevicePeriodicStatus len=14 seq=0x1a opcode=0x43 data=UnknownPayload(payload=22 8a 8d c0 00 81 d8 13) trailer=26 a9 term=0x7e syscall_len=14
+02:11:30.396665 mcu->host DevicePeriodicStatus len=14 seq=0x1a opcode=0x43 data=UnknownPayload(payload=1b 8f 83 b1 00 81 d7 52) trailer=60 d1 term=0x7e syscall_len=14
+02:11:30.441459 host->mcu HostAction len=14 seq=0x1a opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b e8 ad ba 0a) trailer=a7 44 term=0x7e
+02:11:30.442195 mcu->host Unknown(0x20) len=5 seq=0x1b opcode=0x20 payload= raw=05 1b 20 52 7e trailer=52 term=0x7e syscall_len=5
+02:11:30.445833 mcu->host DeviceActionResponse len=18 seq=0x1b opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 3a 02 08 a0 b5) trailer=1b 51 term=0x7e syscall_len=18
+02:11:30.452242 host->mcu HostAction len=14 seq=0x1b opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b 28 20 98 0a) trailer=53 aa term=0x7e syscall_len=14
+02:11:30.453554 mcu->host Unknown(0x54) len=5 seq=0x1c opcode=0x54 payload= raw=05 1c 54 ed 7e trailer=ed term=0x7e syscall_len=5
+02:11:30.457191 mcu->host DeviceActionResponse len=18 seq=0x1c opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=8a cd term=0x7e syscall_len=18
+02:11:30.471097 mcu->host DevicePeriodicStatus len=14 seq=0x1c opcode=0x43 data=UnknownPayload(payload=22 8f e9 f6 00 81 d8 11) trailer=65 9e term=0x7e syscall_len=14
+02:11:30.486418 host->mcu HostAction len=14 seq=0x1c opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 e8 ad e1 0a) trailer=22 e9 term=0x7e syscall_len=14
+02:11:30.489854 host->mcu HostPeriodicQuery len=6 seq=0x1d opcode=0x05 data=Empty trailer=9d ae term=0x7e
+02:11:30.493039 mcu->host DeviceQueryResponse len=10 seq=0x1e opcode=0x3b data=UnknownPayload(payload=8a bb 94 0c) trailer=94 82 term=0x7e syscall_len=15
+02:11:30.493039 mcu->host Unknown(0x77) len=5 seq=0x1e opcode=0x77 payload= raw=05 1e 77 ff 7e trailer=ff term=0x7e syscall_len=15
+02:11:30.495556 mcu->host DeviceActionResponse len=18 seq=0x1e opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 1a 02 08 20 9d) trailer=d7 15 term=0x7e syscall_len=18
+02:11:30.501925 host->mcu HostAction len=14 seq=0x1e opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 28 20 c3 0a) trailer=a2 6e term=0x7e syscall_len=14
+02:11:30.503509 mcu->host Unknown(0x66) len=5 seq=0x1f opcode=0x66 payload= raw=05 1f 66 76 7e trailer=76 term=0x7e syscall_len=5
+02:11:30.629016 host->mcu HostAction len=14 seq=0x1f opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b e8 2d 97 0a) trailer=10 18 term=0x7e syscall_len=14
+02:11:30.630290 mcu->host Unknown(0x9e) len=5 seq=0x10 opcode=0x9e payload= raw=05 10 9e 81 7e trailer=81 term=0x7e syscall_len=5
+02:11:30.633247 mcu->host DeviceActionResponse len=18 seq=0x10 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 1a 02 08 20 9d) trailer=36 1b term=0x7e syscall_len=18
+02:11:30.638953 host->mcu HostAction len=14 seq=0x10 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b 28 a0 b5 0a) trailer=65 0d term=0x7e syscall_len=14
+02:11:30.640563 mcu->host Unknown(0x8f) len=5 seq=0x11 opcode=0x8f payload= raw=05 11 8f 08 7e trailer=08 term=0x7e syscall_len=5
+02:11:30.643230 mcu->host DeviceActionResponse len=18 seq=0x11 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=e8 fd term=0x7e syscall_len=18
+02:11:30.707330 mcu->host DeviceSensorStatus len=13 seq=0x11 opcode=0x48 data=UnknownPayload(payload=00 8c fa fd 20 00 00) trailer=8b f6 term=0x7e syscall_len=13
+02:11:30.710003 mcu->host Unknown(0x3d) len=14 seq=0x11 opcode=0x3d payload=81 7a 82 d6 28 84 95 2c raw=0e 11 3d 81 7a 82 d6 28 84 95 2c b0 6c 7e trailer=b0 6c term=0x7e syscall_len=14
+02:11:30.737294 mcu->host DeviceSensorStatus len=13 seq=0x11 opcode=0x48 data=UnknownPayload(payload=03 8d a6 f6 20 00 00) trailer=e5 f4 term=0x7e syscall_len=13
+02:11:30.803289 mcu->host DeviceSensorStatus len=18 seq=0x11 opcode=0x48 data=UnknownPayload(payload=01 8e 86 ef 40 83 d7 41 8e 85 b4 00) trailer=73 51 term=0x7e syscall_len=18
+02:11:30.896602 mcu->host DevicePeriodicStatus len=14 seq=0x11 opcode=0x43 data=UnknownPayload(payload=1b 94 df e7 00 81 d7 54) trailer=e4 83 term=0x7e syscall_len=14
+02:11:30.966649 mcu->host DevicePeriodicStatus len=14 seq=0x11 opcode=0x43 data=UnknownPayload(payload=22 95 c6 ac 00 81 d8 15) trailer=0b 95 term=0x7e syscall_len=14
+02:11:31.396620 mcu->host DevicePeriodicStatus len=14 seq=0x11 opcode=0x43 data=UnknownPayload(payload=1b 9a bc 9d 00 81 d7 53) trailer=c4 8a term=0x7e syscall_len=14
+02:11:31.442934 host->mcu HostAction len=14 seq=0x11 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b e8 ad ba 0a) trailer=ba 04 term=0x7e
+02:11:31.447296 mcu->host DeviceActionResponse len=18 seq=0x12 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 3a 02 08 a0 b5) trailer=8a d8 term=0x7e syscall_len=18
+02:11:31.452645 host->mcu HostAction len=14 seq=0x12 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b 28 20 98 0a) trailer=16 a4 term=0x7e syscall_len=14
+02:11:31.453466 mcu->host Unknown(0xac) len=5 seq=0x13 opcode=0xac payload= raw=05 13 ac 1a 7e trailer=1a term=0x7e syscall_len=5
+02:11:31.457161 mcu->host DeviceActionResponse len=18 seq=0x13 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=15 29 term=0x7e syscall_len=18
+02:11:31.466678 mcu->host DevicePeriodicStatus len=14 seq=0x13 opcode=0x43 data=UnknownPayload(payload=22 9b a2 e2 00 81 d8 09) trailer=38 90 term=0x7e syscall_len=14
+02:11:31.473664 host->mcu HostPeriodicQuery len=6 seq=0x13 opcode=0x05 data=Empty trailer=07 be term=0x7e
+02:11:31.475323 mcu->host DeviceQueryResponse len=10 seq=0x14 opcode=0x3b data=UnknownPayload(payload=95 dc 8d 51) trailer=8e 75 term=0x7e syscall_len=15
+02:11:31.475323 mcu->host Unknown(0xd8) len=5 seq=0x14 opcode=0xd8 payload= raw=05 14 d8 a5 7e trailer=a5 term=0x7e syscall_len=15
+02:11:31.487528 host->mcu HostAction len=14 seq=0x14 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 e8 ad e1 0a) trailer=4b c0 term=0x7e
+02:11:31.491761 mcu->host DeviceActionResponse len=18 seq=0x15 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 1a 02 08 20 9d) trailer=bb 48 term=0x7e syscall_len=18
+02:11:31.496848 host->mcu HostAction len=14 seq=0x15 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 28 20 c3 0a) trailer=bf 2e term=0x7e syscall_len=14
+02:11:31.501614 mcu->host DeviceActionResponse len=18 seq=0x16 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=98 7a term=0x7e syscall_len=18
+02:11:31.629551 host->mcu HostAction len=14 seq=0x16 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b e8 2d 97 0a) trailer=55 16 term=0x7e syscall_len=14
+02:11:31.631305 mcu->host Unknown(0xea) len=5 seq=0x17 opcode=0xea payload= raw=05 17 ea 3e 7e trailer=3e term=0x7e syscall_len=5
+02:11:31.633900 mcu->host DeviceActionResponse len=18 seq=0x17 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 1a 02 08 20 9d) trailer=46 9c term=0x7e syscall_len=18
+02:11:31.639062 host->mcu HostAction len=14 seq=0x17 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b 28 a0 b5 0a) trailer=a1 f8 term=0x7e syscall_len=14
+02:11:31.639660 mcu->host Unknown(0x12) len=5 seq=0x18 opcode=0x12 payload= raw=05 18 12 c9 7e trailer=c9 term=0x7e syscall_len=5
+02:11:31.643306 mcu->host DeviceActionResponse len=18 seq=0x18 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=79 74 term=0x7e syscall_len=18
+02:11:31.707974 mcu->host DeviceSensorStatus len=13 seq=0x18 opcode=0x48 data=UnknownPayload(payload=00 98 b4 c7 00 00 00) trailer=d8 20 term=0x7e syscall_len=13
+02:11:31.804565 mcu->host DeviceSensorStatus len=18 seq=0x18 opcode=0x48 data=UnknownPayload(payload=01 99 c1 97 00 83 db 07 99 bc e4 40) trailer=86 8d term=0x7e syscall_len=18
+02:11:31.896624 mcu->host DevicePeriodicStatus len=14 seq=0x18 opcode=0x43 data=UnknownPayload(payload=1b a0 98 d3 00 81 d7 54) trailer=ff 70 term=0x7e syscall_len=14
+02:11:31.966652 mcu->host DevicePeriodicStatus len=14 seq=0x18 opcode=0x43 data=UnknownPayload(payload=22 a0 ff 98 00 81 d8 0d) trailer=ef d9 term=0x7e syscall_len=14
+02:11:31.993945 host->mcu Unknown(0x18) len=59 seq=0x18 opcode=0x18 payload=10 01 17 10 cb f8 86 5f 01 00 18 0d 00 17 0d cb f7 e8 1f 01 00 17 0d 81 a5 65 02 ff c5 7c 17 10 81 9e 2e 02 ff cb 60 17 0d ce 48 06 f9 38 17 10 cd 79 06 f9 43 raw=3b 18 18 10 01 17 10 cb f8 86 5f 01 00 18 0d 00 17 0d cb f7 e8 1f 01 00 17 0d 81 a5 65 02 ff c5 7c 17 10 81 9e 2e 02 ff cb 60 17 0d ce 48 06 f9 38 17 10 cd 79 06 f9 43 03 84 7e trailer=03 84 term=0x7e syscall_len=59
+02:11:31.996222 host->mcu HostMotionControl len=64 seq=0x19 opcode=0x17 data=UnknownPayload(payload=0d ae 19 07 fe 57 17 10 ae 0e 07 fe 58 17 0d a8 47 15 00 17 10 a8 47 15 00 17 0d ad 3f 11 81 36 17 10 ad 50 11 81 35 17 0d b7 54 14 00 17 10 b7 52 14 00 17 0d be 1a 04 88 19) trailer=1d 27 term=0x7e syscall_len=64
+02:11:31.997868 mcu->host DeviceHomingAck len=5 seq=0x1a opcode=0x31 data=Empty trailer=db term=0x7e syscall_len=5
+02:11:32.012221 host->mcu HostMotionControl len=28 seq=0x1a opcode=0x17 data=UnknownPayload(payload=10 be 52 04 88 20 17 0d 80 e3 47 02 a4 7e 17 10 80 e4 5f 02 a6 3a) trailer=8d a5 term=0x7e syscall_len=28
+02:11:32.013475 mcu->host Unknown(0x20) len=5 seq=0x1b opcode=0x20 payload= raw=05 1b 20 52 7e trailer=52 term=0x7e syscall_len=5
+02:11:32.328747 host->mcu HostMotionControl len=60 seq=0x1b opcode=0x17 data=UnknownPayload(payload=0d 83 9b ad 14 01 00 17 10 83 9b d8 37 01 00 17 0d 82 83 10 02 fe f1 5a 17 10 81 d6 2a 02 ff 9c 30 17 0d d3 00 05 f8 12 17 10 d1 71 05 f8 42 17 0d b0 40 08 fe 3d) trailer=67 66 term=0x7e syscall_len=60
+02:11:32.330244 mcu->host Unknown(0x54) len=5 seq=0x1c opcode=0x54 payload= raw=05 1c 54 ed 7e trailer=ed term=0x7e syscall_len=5
+02:11:32.330885 host->mcu HostMotionControl len=63 seq=0x1c opcode=0x17 data=UnknownPayload(payload=10 af 6a 08 fe 55 17 0d a8 4a 16 00 17 10 a8 43 15 00 17 10 ac 7f 11 81 3a 17 0d af 4f 10 81 28 17 0d b9 20 0e 60 17 10 b8 18 14 79 17 0d b7 4a 07 31 17 10 bd 3b 04 87 56) trailer=c8 7f term=0x7e syscall_len=63
+02:11:32.331810 mcu->host Unknown(0x45) len=5 seq=0x1d opcode=0x45 payload= raw=05 1d 45 64 7e trailer=64 term=0x7e syscall_len=5
+02:11:32.332457 host->mcu HostMotionControl len=34 seq=0x1d opcode=0x17 data=UnknownPayload(payload=0d c3 41 04 88 72 17 10 df 49 02 a0 2b 17 0d 80 fb 2c 02 cd 7e 17 10 81 d0 7c 01 00) trailer=b1 12 term=0x7e syscall_len=34
+02:11:32.334200 mcu->host Unknown(0x77) len=5 seq=0x1e opcode=0x77 payload= raw=05 1e 77 ff 7e trailer=ff term=0x7e syscall_len=5
+02:11:32.396649 mcu->host DevicePeriodicStatus len=14 seq=0x1e opcode=0x43 data=UnknownPayload(payload=1b a5 f5 89 00 81 d7 55) trailer=7d 2c term=0x7e syscall_len=14
+02:11:32.443667 host->mcu HostAction len=14 seq=0x1e opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b e8 ad ba 0a) trailer=17 d8 term=0x7e syscall_len=14
+02:11:32.448261 mcu->host DeviceActionResponse len=18 seq=0x1f opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 3a 02 08 a0 b5) trailer=e8 e8 term=0x7e syscall_len=18
+02:11:32.464216 host->mcu HostPeriodicQuery len=6 seq=0x1f opcode=0x05 data=Empty trailer=ae 1e term=0x7e
+02:11:32.468658 mcu->host DevicePeriodicStatus len=14 seq=0x10 opcode=0x43 data=UnknownPayload(payload=22 a6 db ce 00 81 d8 16) trailer=ab 59 term=0x7e syscall_len=14
+02:11:32.472733 host->mcu HostAction len=14 seq=0x10 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b 28 20 98 0a) trailer=4e ea term=0x7e syscall_len=14
+02:11:32.474508 mcu->host Unknown(0x8f) len=5 seq=0x11 opcode=0x8f payload= raw=05 11 8f 08 7e trailer=08 term=0x7e syscall_len=5
+02:11:32.477432 mcu->host DeviceActionResponse len=18 seq=0x11 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=e8 fd term=0x7e syscall_len=18
+02:11:32.488398 host->mcu HostAction len=14 seq=0x11 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 e8 ad e1 0a) trailer=d7 7b term=0x7e syscall_len=14
+02:11:32.489654 mcu->host Unknown(0xbd) len=5 seq=0x12 opcode=0xbd payload= raw=05 12 bd 93 7e trailer=93 term=0x7e syscall_len=5
+02:11:32.492710 mcu->host DeviceActionResponse len=18 seq=0x12 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 26 02 08 20 86) trailer=c6 7c term=0x7e syscall_len=18
+02:11:32.499533 host->mcu HostAction len=14 seq=0x12 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 28 20 c3 0a) trailer=7b db term=0x7e syscall_len=14
+02:11:32.501362 mcu->host Unknown(0xac) len=5 seq=0x13 opcode=0xac payload= raw=05 13 ac 1a 7e trailer=1a term=0x7e syscall_len=5
+02:11:32.504242 mcu->host DeviceActionResponse len=18 seq=0x13 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=15 29 term=0x7e syscall_len=18
+02:11:32.530279 host->mcu HostMotionControl len=64 seq=0x13 opcode=0x17 data=UnknownPayload(payload=0d 82 83 8f 44 01 00 17 10 82 83 85 49 01 00 17 0d 80 f9 47 03 e7 24 17 10 80 f6 5b 03 e8 79 17 0d c2 71 06 fb 06 17 10 c1 16 07 fb 5f 17 0d aa 30 0c ff 58 17 10 a8 70 1a 7d) trailer=c6 4f term=0x7e syscall_len=64
+02:11:32.532623 host->mcu HostMotionControl len=58 seq=0x14 opcode=0x17 data=UnknownPayload(payload=0d a8 5c 0f 00 17 0d ae 63 10 81 30 17 10 af 26 10 81 28 17 0d ba 1b 0a ff 43 17 10 bb 28 08 ff 0d 17 10 b7 66 0c 00 17 0d b6 6a 0b 1d 17 10 bb 17 05 87 4c) trailer=17 a3 term=0x7e syscall_len=58
+02:11:32.534022 mcu->host Unknown(0xc9) len=5 seq=0x15 opcode=0xc9 payload= raw=05 15 c9 2c 7e trailer=2c term=0x7e syscall_len=5
+02:11:32.534615 host->mcu HostMotionControl len=28 seq=0x15 opcode=0x17 data=UnknownPayload(payload=0d c2 4b 04 87 46 17 0d 80 f3 49 02 b5 0f 17 10 80 f5 63 02 b8 2b) trailer=a5 d2 term=0x7e syscall_len=28
+02:11:32.535634 mcu->host Unknown(0xfb) len=5 seq=0x16 opcode=0xfb payload= raw=05 16 fb b7 7e trailer=b7 term=0x7e syscall_len=5
+02:11:32.631331 host->mcu HostAction len=14 seq=0x16 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b e8 2d 97 0a) trailer=55 16 term=0x7e syscall_len=14
+02:11:32.632537 mcu->host Unknown(0xea) len=5 seq=0x17 opcode=0xea payload= raw=05 17 ea 3e 7e trailer=3e term=0x7e syscall_len=5
+02:11:32.641291 host->mcu HostAction len=14 seq=0x17 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b 28 a0 b5 0a) trailer=a1 f8 term=0x7e syscall_len=14
+02:11:32.642444 mcu->host Unknown(0x12) len=5 seq=0x18 opcode=0x12 payload= raw=05 18 12 c9 7e trailer=c9 term=0x7e syscall_len=5
+02:11:32.708528 mcu->host DeviceSensorStatus len=13 seq=0x18 opcode=0x48 data=UnknownPayload(payload=00 a3 ee 90 60 00 00) trailer=8c 65 term=0x7e syscall_len=13
+02:11:32.730524 host->mcu HostMotionControl len=60 seq=0x18 opcode=0x17 data=UnknownPayload(payload=0d 82 83 c8 4b 01 00 17 10 82 83 c6 32 01 00 17 0d 81 8c 3c 02 ff d8 6a 17 10 81 88 0f 02 ff db 68 17 0d cb 30 06 fa 1b 17 10 ca 55 06 fa 2f 17 0d ab 75 0a ff 33) trailer=73 60 term=0x7e syscall_len=60
+02:11:32.731896 mcu->host Unknown(0x03) len=5 seq=0x19 opcode=0x03 payload= raw=05 19 03 40 7e trailer=40 term=0x7e syscall_len=5
+02:11:32.732512 host->mcu HostMotionControl len=64 seq=0x19 opcode=0x17 data=UnknownPayload(payload=10 ab 48 0b ff 3f 17 0d a8 53 12 00 17 10 a8 5a 11 00 17 0d ad 73 10 81 39 17 10 ae 0b 10 81 37 17 0d bb 07 09 ff 27 17 10 ba 70 09 ff 2d 17 0d b7 61 0c 00 17 10 b6 7a 0c 15) trailer=5a 16 term=0x7e syscall_len=64
+02:11:32.734828 mcu->host DeviceHomingAck len=5 seq=0x1a opcode=0x31 data=Empty trailer=db term=0x7e syscall_len=5
+02:11:32.735808 host->mcu HostMotionControl len=35 seq=0x1a opcode=0x17 data=UnknownPayload(payload=0d c0 2d 04 88 10 17 10 bf 2e 04 89 01 17 0d 80 e9 35 02 ab 4d 17 10 80 ea 0d 02 ae 3c) trailer=b6 a0 term=0x7e syscall_len=35
+02:11:32.737531 mcu->host Unknown(0x20) len=5 seq=0x1b opcode=0x20 payload= raw=05 1b 20 52 7e trailer=52 term=0x7e syscall_len=5
+02:11:32.738767 mcu->host DeviceSensorStatus len=13 seq=0x1b opcode=0x48 data=UnknownPayload(payload=03 a4 9a 89 60 00 00) trailer=ec fc term=0x7e syscall_len=13
+02:11:32.805351 mcu->host DeviceSensorStatus len=18 seq=0x1b opcode=0x48 data=UnknownPayload(payload=01 a4 fb be 40 83 de 4e a4 f8 c7 40) trailer=e1 9d term=0x7e syscall_len=18
+02:11:32.896642 mcu->host DevicePeriodicStatus len=14 seq=0x1b opcode=0x43 data=UnknownPayload(payload=1b ab d1 bf 00 81 d7 50) trailer=4a 9e term=0x7e syscall_len=14
+02:11:32.931223 host->mcu HostMotionControl len=60 seq=0x1b opcode=0x17 data=UnknownPayload(payload=0d 82 87 8a 04 01 00 17 10 82 87 8e 4b 01 00 17 0d 81 aa 00 02 ff c2 50 17 10 81 a1 76 02 ff c9 00 17 0d ce 79 06 f9 2d 17 10 ce 14 06 f9 46 17 0d ae 5f 07 fe 39) trailer=58 0c term=0x7e syscall_len=60
+02:11:32.932951 mcu->host Unknown(0x54) len=5 seq=0x1c opcode=0x54 payload= raw=05 1c 54 ed 7e trailer=ed term=0x7e syscall_len=5
+02:11:32.933660 host->mcu HostMotionControl len=64 seq=0x1c opcode=0x17 data=UnknownPayload(payload=10 ad 5e 07 fe 6d 17 0d a8 50 15 00 17 10 a8 40 15 00 17 0d ad 32 11 81 37 17 10 ad 4c 11 81 35 17 0d b7 56 14 00 17 10 b7 54 14 00 17 0d bd 71 04 88 1d 17 10 be 32 04 88 1d) trailer=64 5e term=0x7e syscall_len=64
+02:11:32.935058 mcu->host Unknown(0x45) len=5 seq=0x1d opcode=0x45 payload= raw=05 1d 45 64 7e trailer=64 term=0x7e syscall_len=5
+02:11:32.935548 host->mcu HostMotionControl len=28 seq=0x1d opcode=0x17 data=UnknownPayload(payload=0d 80 e3 01 02 a4 21 17 10 80 e4 13 02 a5 59 17 0d 82 93 39 01 00) trailer=3c 38 term=0x7e syscall_len=28
+02:11:32.937222 mcu->host Unknown(0x77) len=5 seq=0x1e opcode=0x77 payload= raw=05 1e 77 ff 7e trailer=ff term=0x7e syscall_len=5
+02:11:32.966645 mcu->host DevicePeriodicStatus len=14 seq=0x1e opcode=0x43 data=UnknownPayload(payload=22 ac b8 84 00 81 d8 13) trailer=92 1e term=0x7e syscall_len=14
+02:11:33.133696 host->mcu Unknown(0x18) len=64 seq=0x1e opcode=0x18 payload=13 00 17 13 80 e7 bb f8 23 01 00 17 10 82 88 a0 7b 01 00 17 0d 82 87 f6 57 01 00 17 10 81 e4 77 02 ff 8e 68 17 0d 80 ee 39 03 ed 6f 17 10 d2 3a 05 f8 29 17 0d bd 23 08 fc 6e raw=40 1e 18 13 00 17 13 80 e7 bb f8 23 01 00 17 10 82 88 a0 7b 01 00 17 0d 82 87 f6 57 01 00 17 10 81 e4 77 02 ff 8e 68 17 0d 80 ee 39 03 ed 6f 17 10 d2 3a 05 f8 29 17 0d bd 23 08 fc 6e d4 6a 7e trailer=d4 6a term=0x7e syscall_len=64
+02:11:33.134270 mcu->host Unknown(0x66) len=5 seq=0x1f opcode=0x66 payload= raw=05 1f 66 76 7e trailer=76 term=0x7e syscall_len=5
+02:11:33.134653 host->mcu HostMotionControl len=64 seq=0x1f opcode=0x17 data=UnknownPayload(payload=10 b0 1f 08 fe 45 17 0d a8 3c 19 00 17 10 a8 48 16 00 17 0d af 44 10 81 29 17 10 af 2a 10 81 2f 17 0d b9 2a 0d ff 5e 17 10 b8 27 14 77 17 0d b6 6e 08 3b 17 10 bd 6d 04 87 32) trailer=a3 95 term=0x7e syscall_len=64
+02:11:33.135747 mcu->host Unknown(0x9e) len=5 seq=0x10 opcode=0x9e payload= raw=05 10 9e 81 7e trailer=81 term=0x7e syscall_len=5
+02:11:33.136381 host->mcu HostMotionControl len=34 seq=0x10 opcode=0x17 data=UnknownPayload(payload=0d c2 66 04 89 18 17 10 df 0a 02 9f 66 17 0d 80 f9 57 02 cb 08 17 10 81 cb 38 01 00) trailer=2d 6f term=0x7e syscall_len=34
+02:11:33.137138 mcu->host Unknown(0x8f) len=5 seq=0x11 opcode=0x8f payload= raw=05 11 8f 08 7e trailer=08 term=0x7e syscall_len=5
+02:11:33.333698 host->mcu HostMotionControl len=64 seq=0x11 opcode=0x17 data=UnknownPayload(payload=0d 81 fa f0 52 01 00 17 10 81 fa e7 6f 01 00 17 0d 80 fa 6f 03 e6 62 17 10 80 f8 0e 03 e8 10 17 0d c3 13 06 fa 7d 17 10 c1 7c 06 fb 3b 17 0d aa 58 0a ff 4c 17 10 a8 59 1b 7f) trailer=48 60 term=0x7e syscall_len=64
+02:11:33.334812 mcu->host Unknown(0xbd) len=5 seq=0x12 opcode=0xbd payload= raw=05 12 bd 93 7e trailer=93 term=0x7e syscall_len=5
+02:11:33.335603 host->mcu HostMotionControl len=58 seq=0x12 opcode=0x17 data=UnknownPayload(payload=0d a8 4d 11 00 17 0d ae 5f 10 81 30 17 10 af 0a 10 81 2b 17 0d ba 37 0a ff 3a 17 10 bb 0e 08 ff 18 17 10 b6 6d 0d 16 17 0d b7 24 0b 13 17 0d c2 67 04 87 1f) trailer=61 85 term=0x7e
+02:11:33.336601 mcu->host Unknown(0xac) len=5 seq=0x13 opcode=0xac payload= raw=05 13 ac 1a 7e trailer=1a term=0x7e syscall_len=5
+02:11:33.337294 host->mcu HostMotionControl len=28 seq=0x13 opcode=0x17 data=UnknownPayload(payload=10 c3 27 04 87 1d 17 0d 80 f3 07 02 b3 0f 17 10 80 f5 07 02 b6 23) trailer=d4 34 term=0x7e syscall_len=28
+02:11:33.338092 mcu->host Unknown(0xd8) len=5 seq=0x14 opcode=0xd8 payload= raw=05 14 d8 a5 7e trailer=a5 term=0x7e syscall_len=5
+02:11:33.396665 mcu->host DevicePeriodicStatus len=14 seq=0x14 opcode=0x43 data=UnknownPayload(payload=1b b1 ad f5 00 81 d7 56) trailer=a7 95 term=0x7e syscall_len=14
+02:11:33.444625 host->mcu HostAction len=14 seq=0x14 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b e8 ad ba 0a) trailer=26 bf term=0x7e syscall_len=14
+02:11:33.445389 mcu->host Unknown(0xc9) len=5 seq=0x15 opcode=0xc9 payload= raw=05 15 c9 2c 7e trailer=2c term=0x7e syscall_len=5
+02:11:33.450002 host->mcu HostPeriodicQuery len=6 seq=0x15 opcode=0x05 data=Empty trailer=53 6e term=0x7e
+02:11:33.451842 mcu->host DeviceActionResponse len=18 seq=0x15 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d 80 3a 02 08 a0 be) trailer=46 5d term=0x7e syscall_len=18
+02:11:33.454992 mcu->host DeviceQueryResponse len=10 seq=0x16 opcode=0x3b data=UnknownPayload(payload=ac ab 85 2a) trailer=3c fb term=0x7e syscall_len=15
+02:11:33.454992 mcu->host Unknown(0xfb) len=5 seq=0x16 opcode=0xfb payload= raw=05 16 fb b7 7e trailer=b7 term=0x7e syscall_len=15
+02:11:33.460504 host->mcu HostAction len=14 seq=0x16 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b 28 20 98 0a) trailer=a6 38 term=0x7e syscall_len=14
+02:11:33.465014 mcu->host DeviceActionResponse len=18 seq=0x17 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=e6 90 term=0x7e syscall_len=18
+02:11:33.489801 host->mcu HostAction len=14 seq=0x17 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 e8 ad e1 0a) trailer=3f a9 term=0x7e syscall_len=14
+02:11:33.491088 mcu->host Unknown(0x12) len=5 seq=0x18 opcode=0x12 payload= raw=05 18 12 c9 7e trailer=c9 term=0x7e syscall_len=5
+02:11:33.494209 mcu->host DeviceActionResponse len=18 seq=0x18 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 26 02 08 20 86) trailer=d4 cb term=0x7e syscall_len=18
+02:11:33.500653 host->mcu HostAction len=14 seq=0x18 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 28 20 c3 0a) trailer=4a bc term=0x7e syscall_len=14
+02:11:33.501424 mcu->host Unknown(0x03) len=5 seq=0x19 opcode=0x03 payload= raw=05 19 03 40 7e trailer=40 term=0x7e syscall_len=5
+02:11:33.505804 mcu->host DeviceActionResponse len=18 seq=0x19 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=07 9e term=0x7e syscall_len=18
+02:11:33.632123 host->mcu HostAction len=14 seq=0x19 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b e8 2d 97 0a) trailer=f8 ca term=0x7e
+02:11:33.632992 mcu->host DeviceHomingAck len=5 seq=0x1a opcode=0x31 data=Empty trailer=db term=0x7e syscall_len=5
+02:11:33.636365 mcu->host DeviceActionResponse len=18 seq=0x1a opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d 80 26 02 08 20 8d) trailer=95 1d term=0x7e syscall_len=18
+02:11:33.639935 host->mcu HostMotionControl len=60 seq=0x1a opcode=0x17 data=UnknownPayload(payload=0d 83 9c 85 1d 01 00 17 10 83 9c 83 56 01 00 17 0d 81 8e 6a 02 ff d7 17 17 10 81 8a 1e 02 ff da 30 17 0d cb 70 06 fa 06 17 10 cb 00 06 fa 26 17 0d ac 1e 09 ff 29) trailer=8d 9b term=0x7e syscall_len=60
+02:11:33.640554 mcu->host Unknown(0x20) len=5 seq=0x1b opcode=0x20 payload= raw=05 1b 20 52 7e trailer=52 term=0x7e syscall_len=5
+02:11:33.641215 host->mcu HostMotionControl len=64 seq=0x1b opcode=0x17 data=UnknownPayload(payload=10 ab 59 0a ff 3b 17 0d a8 48 13 00 17 10 a8 4b 12 00 17 0d ad 6e 10 81 39 17 10 ae 13 10 81 35 17 0d bb 23 09 ff 1f 17 10 bb 2a 09 ff 1c 17 0d b7 6a 0c 00 17 10 b7 6e 0c 00) trailer=24 6c term=0x7e syscall_len=64
+02:11:33.641981 mcu->host Unknown(0x54) len=5 seq=0x1c opcode=0x54 payload= raw=05 1c 54 ed 7e trailer=ed term=0x7e syscall_len=5
+02:11:33.642420 host->mcu HostMotionControl len=35 seq=0x1c opcode=0x17 data=UnknownPayload(payload=0d bf 70 04 88 25 17 10 c0 36 04 88 1d 17 0d 80 e8 2f 02 aa 7c 17 10 80 ea 0c 02 ac 55) trailer=51 df term=0x7e syscall_len=35
+02:11:33.643179 mcu->host Unknown(0x45) len=5 seq=0x1d opcode=0x45 payload= raw=05 1d 45 64 7e trailer=64 term=0x7e syscall_len=5
+02:11:33.649435 host->mcu HostAction len=14 seq=0x1d opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b 28 a0 b5 0a) trailer=90 9f term=0x7e syscall_len=14
+02:11:33.650153 mcu->host Unknown(0x77) len=5 seq=0x1e opcode=0x77 payload= raw=05 1e 77 ff 7e trailer=ff term=0x7e syscall_len=5
+02:11:33.653814 mcu->host DeviceActionResponse len=18 seq=0x1e opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=77 19 term=0x7e syscall_len=18
+02:11:33.708921 mcu->host DeviceSensorStatus len=13 seq=0x1e opcode=0x48 data=UnknownPayload(payload=00 af a7 da 40 00 00) trailer=40 ea term=0x7e syscall_len=13
+02:11:33.738838 mcu->host DeviceSensorStatus len=13 seq=0x1e opcode=0x48 data=UnknownPayload(payload=03 af d3 d3 40 00 00) trailer=29 04 term=0x7e syscall_len=13
+02:11:33.806362 mcu->host DeviceSensorStatus len=18 seq=0x1e opcode=0x48 data=UnknownPayload(payload=01 b0 b5 e6 00 83 e2 15 b0 b4 aa 40) trailer=93 8d term=0x7e syscall_len=18
+02:11:33.896654 mcu->host DevicePeriodicStatus len=14 seq=0x1e opcode=0x43 data=UnknownPayload(payload=1b b7 8a ab 00 81 d7 57) trailer=52 dd term=0x7e syscall_len=14
+02:11:33.966635 mcu->host DevicePeriodicStatus len=14 seq=0x1e opcode=0x43 data=UnknownPayload(payload=22 b7 f0 f0 00 81 d8 16) trailer=1d 92 term=0x7e syscall_len=14
+02:11:34.156583 host->mcu HostMotionControl len=60 seq=0x1e opcode=0x17 data=UnknownPayload(payload=0d 86 80 c8 78 01 00 17 10 86 80 ce 43 01 00 17 0d 81 ae 52 02 ff be 6e 17 10 81 a5 65 02 ff c5 7c 17 0d cf 31 05 f9 1d 17 10 ce 48 06 f9 38 17 0d ae 66 09 fe 74) trailer=00 1f term=0x7e syscall_len=60
+02:11:34.157419 mcu->host Unknown(0x66) len=5 seq=0x1f opcode=0x66 payload= raw=05 1f 66 76 7e trailer=76 term=0x7e syscall_len=5
+02:11:34.157849 host->mcu HostMotionControl len=64 seq=0x1f opcode=0x17 data=UnknownPayload(payload=10 ae 19 07 fe 57 17 10 a8 47 15 00 17 0d a8 4d 14 00 17 0d ad 26 11 81 38 17 10 ad 3f 11 81 36 17 0d b7 57 14 00 17 10 b7 54 14 00 17 0d bd 4f 04 88 1e 17 10 be 1a 04 88 19) trailer=82 ff term=0x7e syscall_len=64
+02:11:34.158825 mcu->host Unknown(0x9e) len=5 seq=0x10 opcode=0x9e payload= raw=05 10 9e 81 7e trailer=81 term=0x7e syscall_len=5
+02:11:34.176974 host->mcu HostMotionControl len=28 seq=0x10 opcode=0x17 data=UnknownPayload(payload=0d 80 e2 3a 02 a3 49 17 10 80 e3 47 02 a4 7d 17 0d 82 80 7f 01 00) trailer=d2 83 term=0x7e syscall_len=28
+02:11:34.177878 mcu->host Unknown(0x8f) len=5 seq=0x11 opcode=0x8f payload= raw=05 11 8f 08 7e trailer=08 term=0x7e syscall_len=5
+02:11:34.396666 mcu->host DevicePeriodicStatus len=14 seq=0x11 opcode=0x43 data=UnknownPayload(payload=1b bc e6 e1 00 81 d7 57) trailer=b2 4c term=0x7e syscall_len=14
+02:11:34.432304 host->mcu HostPeriodicQuery len=6 seq=0x11 opcode=0x05 data=Empty trailer=34 0e term=0x7e
+02:11:34.445181 host->mcu HostAction len=14 seq=0x12 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b e8 ad ba 0a) trailer=ce 6d term=0x7e syscall_len=14
+02:11:34.445804 mcu->host Unknown(0xac) len=5 seq=0x13 opcode=0xac payload= raw=05 13 ac 1a 7e trailer=1a term=0x7e syscall_len=5
+02:11:34.449919 mcu->host DeviceActionResponse len=18 seq=0x13 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 3a 02 08 a0 b5) trailer=f4 32 term=0x7e syscall_len=18
+02:11:34.466679 mcu->host DevicePeriodicStatus len=14 seq=0x13 opcode=0x43 data=UnknownPayload(payload=22 bd cd a6 00 81 d8 11) trailer=c9 1d term=0x7e syscall_len=14
+02:11:34.470037 host->mcu HostAction len=14 seq=0x13 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b 28 20 98 0a) trailer=3a 83 term=0x7e syscall_len=14
+02:11:34.470567 mcu->host Unknown(0xd8) len=5 seq=0x14 opcode=0xd8 payload= raw=05 14 d8 a5 7e trailer=a5 term=0x7e syscall_len=5
+02:11:34.474651 mcu->host DeviceActionResponse len=18 seq=0x14 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=65 ae term=0x7e syscall_len=18
+02:11:34.490684 host->mcu HostAction len=14 seq=0x14 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 e8 ad e1 0a) trailer=4b c0 term=0x7e syscall_len=14
+02:11:34.491223 mcu->host Unknown(0xc9) len=5 seq=0x15 opcode=0xc9 payload= raw=05 15 c9 2c 7e trailer=2c term=0x7e syscall_len=5
+02:11:34.495137 mcu->host DeviceActionResponse len=18 seq=0x15 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d 80 26 02 08 20 8d) trailer=0a f9 term=0x7e syscall_len=18
+02:11:34.499076 host->mcu HostMotionControl len=59 seq=0x15 opcode=0x17 data=UnknownPayload(payload=10 83 9b ad 15 01 00 17 0d 83 9b b3 27 01 00 17 10 82 83 10 02 fe f1 5a 17 0d 80 ef 7c 03 ec 53 17 10 d3 00 05 f8 12 17 0d be 1a 08 fc 4d 17 10 b0 40 08 fe 3d) trailer=e7 6f term=0x7e syscall_len=59
+02:11:34.510688 mcu->host Unknown(0xfb) len=5 seq=0x16 opcode=0xfb payload= raw=05 16 fb b7 7e trailer=b7 term=0x7e syscall_len=5
+02:11:34.511693 host->mcu HostMotionControl len=63 seq=0x16 opcode=0x17 data=UnknownPayload(payload=0d a8 44 19 00 17 10 a8 4a 16 00 17 0d af 33 10 81 2b 17 10 af 4f 10 81 28 17 0d b9 0f 0f 65 17 10 b9 20 0e 60 17 10 b7 48 07 32 17 0d b7 0b 06 80 68 17 0d c2 3d 04 88 6b) trailer=fc 92 term=0x7e syscall_len=63
+02:11:34.512356 mcu->host Unknown(0xea) len=5 seq=0x17 opcode=0xea payload= raw=05 17 ea 3e 7e trailer=3e term=0x7e syscall_len=5
+02:11:34.513744 host->mcu HostMotionControl len=28 seq=0x17 opcode=0x17 data=UnknownPayload(payload=10 c3 3a 04 88 77 17 0d 80 f9 4f 02 c6 72 17 10 80 fb 23 02 ce 07) trailer=25 3b term=0x7e
+02:11:34.515587 mcu->host Unknown(0x12) len=5 seq=0x18 opcode=0x12 payload= raw=05 18 12 c9 7e trailer=c9 term=0x7e syscall_len=5
+02:11:34.518672 host->mcu HostAction len=14 seq=0x18 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 28 20 c3 0a) trailer=4a bc term=0x7e syscall_len=14
+02:11:34.519474 mcu->host Unknown(0x03) len=5 seq=0x19 opcode=0x03 payload= raw=05 19 03 40 7e trailer=40 term=0x7e syscall_len=5
+02:11:34.523194 mcu->host DeviceActionResponse len=18 seq=0x19 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=07 9e term=0x7e syscall_len=18
+02:11:34.637396 host->mcu HostAction len=14 seq=0x19 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b e8 2d 97 0a) trailer=f8 ca term=0x7e syscall_len=14
+02:11:34.638724 mcu->host DeviceHomingAck len=5 seq=0x1a opcode=0x31 data=Empty trailer=db term=0x7e syscall_len=5
+02:11:34.641693 mcu->host DeviceActionResponse len=18 seq=0x1a opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 26 02 08 20 86) trailer=29 1f term=0x7e syscall_len=18
+02:11:34.650634 host->mcu HostAction len=14 seq=0x1a opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b 28 a0 b5 0a) trailer=54 6a term=0x7e syscall_len=14
+02:11:34.654969 mcu->host DeviceActionResponse len=18 seq=0x1b opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=fa 4a term=0x7e syscall_len=18
+02:11:34.709360 mcu->host DeviceSensorStatus len=13 seq=0x1b opcode=0x48 data=UnknownPayload(payload=00 ba e1 a4 20 00 00) trailer=6f 35 term=0x7e syscall_len=13
+02:11:34.739356 mcu->host DeviceSensorStatus len=13 seq=0x1b opcode=0x48 data=UnknownPayload(payload=03 bb 8d 9d 20 00 00) trailer=a0 62 term=0x7e syscall_len=13
+02:11:34.796964 host->mcu HostMotionControl len=58 seq=0x1b opcode=0x17 data=UnknownPayload(payload=0d 83 9b f5 58 01 00 17 10 83 9b ed 7c 01 00 17 0d 80 fc 51 02 e5 38 17 10 80 f9 47 03 e7 24 17 0d c8 4d 06 fa 70 17 10 c2 71 06 fb 06 17 0d aa 55 0d ff 59) trailer=08 4a term=0x7e syscall_len=58
+02:11:34.799914 mcu->host Unknown(0x54) len=5 seq=0x1c opcode=0x54 payload= raw=05 1c 54 ed 7e trailer=ed term=0x7e syscall_len=5
+02:11:34.801080 host->mcu HostMotionControl len=64 seq=0x1c opcode=0x17 data=UnknownPayload(payload=10 aa 30 0c ff 58 17 0d a8 5a 0f 00 17 10 a8 5c 0f 00 17 0d ae 3e 10 81 34 17 10 ae 63 10 81 30 17 0d ba 13 0b ff 46 17 10 ba 1b 0a ff 43 17 10 b6 6a 0b 1d 17 0d b7 29 0a 17) trailer=b5 11 term=0x7e
+02:11:34.802497 mcu->host Unknown(0x45) len=5 seq=0x1d opcode=0x45 payload= raw=05 1d 45 64 7e trailer=64 term=0x7e syscall_len=5
+02:11:34.803025 host->mcu HostMotionControl len=35 seq=0x1d opcode=0x17 data=UnknownPayload(payload=0d c2 12 04 87 44 17 10 c2 4b 04 87 46 17 0d 80 f1 53 02 b2 11 17 10 80 f3 49 02 b5 0f) trailer=c7 00 term=0x7e syscall_len=35
+02:11:34.804133 mcu->host Unknown(0x77) len=5 seq=0x1e opcode=0x77 payload= raw=05 1e 77 ff 7e trailer=ff term=0x7e syscall_len=5
+02:11:34.807383 mcu->host DeviceSensorStatus len=18 seq=0x1e opcode=0x48 data=UnknownPayload(payload=01 bb f0 8d 40 83 e5 5b bb ed 96 40) trailer=bd 93 term=0x7e syscall_len=18
+02:11:34.897396 mcu->host DevicePeriodicStatus len=14 seq=0x1e opcode=0x43 data=UnknownPayload(payload=1b c2 c3 97 00 81 d7 52) trailer=60 dc term=0x7e syscall_len=14
+02:11:34.966677 mcu->host DevicePeriodicStatus len=14 seq=0x1e opcode=0x43 data=UnknownPayload(payload=22 c3 a9 dc 00 81 d8 16) trailer=11 1b term=0x7e syscall_len=14
+02:11:35.102039 host->mcu HostMotionControl len=60 seq=0x1e opcode=0x17 data=UnknownPayload(payload=0d 83 9c 85 45 01 00 17 10 83 9c 84 4e 01 00 17 0d 81 91 29 02 ff d5 33 17 10 81 8c 3c 02 ff d8 6a 17 0d cc 1f 06 f9 7b 17 10 cb 30 06 fa 1b 17 0d ac 3a 09 ff 21) trailer=72 20 term=0x7e syscall_len=60
+02:11:35.103811 mcu->host Unknown(0x66) len=5 seq=0x1f opcode=0x66 payload= raw=05 1f 66 76 7e trailer=76 term=0x7e syscall_len=5
+02:11:35.104948 host->mcu HostMotionControl len=64 seq=0x1f opcode=0x17 data=UnknownPayload(payload=10 ab 75 0a ff 33 17 0d a8 4d 13 00 17 10 a8 53 12 00 17 0d ad 7f 10 81 35 17 10 ad 73 10 81 39 17 0d bc 07 08 fe 7d 17 10 bb 07 09 ff 27 17 0d b7 66 0d 00 17 10 b7 61 0c 00) trailer=1b 46 term=0x7e syscall_len=64
+02:11:35.105689 mcu->host Unknown(0x9e) len=5 seq=0x10 opcode=0x9e payload= raw=05 10 9e 81 7e trailer=81 term=0x7e syscall_len=5
+02:11:35.106410 host->mcu HostMotionControl len=35 seq=0x10 opcode=0x17 data=UnknownPayload(payload=0d bf 59 04 88 21 17 10 c0 2d 04 88 10 17 0d 80 e7 51 02 aa 0b 17 10 80 e9 35 02 ab 4d) trailer=29 02 term=0x7e
+02:11:35.107993 mcu->host Unknown(0x8f) len=5 seq=0x11 opcode=0x8f payload= raw=05 11 8f 08 7e trailer=08 term=0x7e syscall_len=5
+02:11:35.396702 mcu->host DevicePeriodicStatus len=14 seq=0x11 opcode=0x43 data=UnknownPayload(payload=1b c8 9f cd 00 81 d7 52) trailer=6c 08 term=0x7e syscall_len=14
+02:11:35.412198 host->mcu HostMotionControl len=60 seq=0x11 opcode=0x17 data=UnknownPayload(payload=0d 83 ae e5 02 01 00 17 10 83 ae eb 66 01 00 17 0d 81 b3 66 02 ff ba 4e 17 10 81 aa 00 02 ff c2 4f 17 0d cf 67 05 f9 0f 17 10 ce 7c 06 f9 2b 17 0d ae 7b 09 fe 6f) trailer=33 f6 term=0x7e syscall_len=60
+02:11:35.413548 mcu->host Unknown(0xbd) len=5 seq=0x12 opcode=0xbd payload= raw=05 12 bd 93 7e trailer=93 term=0x7e syscall_len=5
+02:11:35.414467 host->mcu HostMotionControl len=64 seq=0x12 opcode=0x17 data=UnknownPayload(payload=10 ae 6a 07 fe 35 17 10 a8 51 15 00 17 0d a8 4f 14 00 17 0d ad 22 11 81 38 17 10 ad 32 11 81 37 17 0d b7 61 14 7f 17 10 b7 56 14 00 17 0d bd 38 04 88 1a 17 10 bd 71 04 88 1d) trailer=3e 5f term=0x7e syscall_len=64
+02:11:35.415826 mcu->host Unknown(0xac) len=5 seq=0x13 opcode=0xac payload= raw=05 13 ac 1a 7e trailer=1a term=0x7e syscall_len=5
+02:11:35.417460 host->mcu HostPeriodicQuery len=36 seq=0x13 opcode=0x05 data=UnknownPayload(payload=17 0d 80 e1 72 02 a2 78 17 10 80 e3 00 02 a4 22 17 0d 81 f4 02 01 00 17 10 82 93 39 01 00) trailer=31 dc term=0x7e
+02:11:35.419490 mcu->host DeviceQueryResponse len=10 seq=0x14 opcode=0x3b data=UnknownPayload(payload=c2 ed 86 66) trailer=71 a4 term=0x7e syscall_len=15
+02:11:35.419490 mcu->host Unknown(0xd8) len=5 seq=0x14 opcode=0xd8 payload= raw=05 14 d8 a5 7e trailer=a5 term=0x7e syscall_len=15
+02:11:35.446754 host->mcu HostAction len=14 seq=0x14 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b e8 ad ba 0a) trailer=26 bf term=0x7e syscall_len=14
+02:11:35.448846 mcu->host Unknown(0xc9) len=5 seq=0x15 opcode=0xc9 payload= raw=05 15 c9 2c 7e trailer=2c term=0x7e syscall_len=5
+02:11:35.451871 mcu->host DeviceActionResponse len=18 seq=0x15 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 3a 02 08 a0 b5) trailer=fa 5f term=0x7e syscall_len=18
+02:11:35.460081 host->mcu HostAction len=14 seq=0x15 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b 28 20 98 0a) trailer=d2 51 term=0x7e syscall_len=14
+02:11:35.461487 mcu->host Unknown(0xfb) len=5 seq=0x16 opcode=0xfb payload= raw=05 16 fb b7 7e trailer=b7 term=0x7e syscall_len=5
+02:11:35.476989 mcu->host DevicePeriodicStatus len=14 seq=0x16 opcode=0x43 data=UnknownPayload(payload=22 c9 86 92 00 81 d8 0f) trailer=04 56 term=0x7e syscall_len=14
+02:11:35.491573 host->mcu HostAction len=14 seq=0x16 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 e8 ad e1 0a) trailer=13 8e term=0x7e syscall_len=14
+02:11:35.492816 mcu->host Unknown(0xea) len=5 seq=0x17 opcode=0xea payload= raw=05 17 ea 3e 7e trailer=3e term=0x7e syscall_len=5
+02:11:35.496293 mcu->host DeviceActionResponse len=18 seq=0x17 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 26 02 08 20 86) trailer=4b 2f term=0x7e syscall_len=18
+02:11:35.502508 host->mcu HostAction len=14 seq=0x17 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 28 20 c3 0a) trailer=e7 60 term=0x7e syscall_len=14
+02:11:35.636782 host->mcu HostAction len=14 seq=0x18 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b e8 2d 97 0a) trailer=d4 ed term=0x7e syscall_len=14
+02:11:35.638099 mcu->host Unknown(0x03) len=5 seq=0x19 opcode=0x03 payload= raw=05 19 03 40 7e trailer=40 term=0x7e syscall_len=5
+02:11:35.641152 mcu->host DeviceActionResponse len=18 seq=0x19 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d 80 26 02 08 20 8d) trailer=16 23 term=0x7e syscall_len=18
+02:11:35.657747 host->mcu HostAction len=14 seq=0x19 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b 28 a0 b5 0a) trailer=20 03 term=0x7e
+02:11:35.659277 mcu->host DeviceHomingAck len=5 seq=0x1a opcode=0x31 data=Empty trailer=db term=0x7e syscall_len=5
+02:11:35.662455 mcu->host DeviceActionResponse len=18 seq=0x1a opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=84 a0 term=0x7e syscall_len=18
+02:11:35.709952 mcu->host DeviceSensorStatus len=13 seq=0x1a opcode=0x48 data=UnknownPayload(payload=00 c6 9a ee 00 00 00) trailer=4d 00 term=0x7e syscall_len=13
+02:11:35.714378 mcu->host Unknown(0x3d) len=14 seq=0x1a opcode=0x3d payload=82 46 84 a2 56 88 8c 40 raw=0e 1a 3d 82 46 84 a2 56 88 8c 40 da 72 7e trailer=da 72 term=0x7e syscall_len=14
+02:11:35.726416 host->mcu HostMotionControl len=63 seq=0x1a opcode=0x17 data=UnknownPayload(payload=0d 83 9b c0 54 01 00 17 10 83 9b a0 2f 01 00 17 0d 80 f1 0a 03 ec 0f 17 10 80 ee 39 03 ed 6f 17 0d be 31 08 fc 4c 17 10 bd 23 08 fc 6e 17 0d a8 43 19 00 17 10 a8 3c 19 00) trailer=13 89 term=0x7e syscall_len=63
+02:11:35.728093 mcu->host Unknown(0x20) len=5 seq=0x1b opcode=0x20 payload= raw=05 1b 20 52 7e trailer=52 term=0x7e syscall_len=5
+02:11:35.729198 host->mcu HostMotionControl len=59 seq=0x1b opcode=0x17 data=UnknownPayload(payload=0d af 1c 10 81 2e 17 10 af 44 10 81 29 17 0d b8 76 10 6a 17 10 b9 2a 0d ff 5e 17 10 b6 6e 08 3b 17 0d b6 4b 05 81 46 17 0d bf 00 04 8b 21 17 10 c2 66 04 89 18) trailer=d1 b2 term=0x7e syscall_len=59
+02:11:35.731019 mcu->host Unknown(0x54) len=5 seq=0x1c opcode=0x54 payload= raw=05 1c 54 ed 7e trailer=ed term=0x7e syscall_len=5
+02:11:35.732040 host->mcu HostMotionControl len=21 seq=0x1c opcode=0x17 data=UnknownPayload(payload=0d 80 f5 12 02 c7 3a 17 10 80 f9 57 02 cb 08) trailer=5e 10 term=0x7e syscall_len=21
+02:11:35.733561 mcu->host Unknown(0x45) len=5 seq=0x1d opcode=0x45 payload= raw=05 1d 45 64 7e trailer=64 term=0x7e syscall_len=5
+02:11:35.739888 mcu->host DeviceSensorStatus len=13 seq=0x1d opcode=0x48 data=UnknownPayload(payload=03 c6 c6 e7 00 00 00) trailer=f7 bd term=0x7e syscall_len=13
+02:11:35.808364 mcu->host DeviceSensorStatus len=18 seq=0x1d opcode=0x48 data=UnknownPayload(payload=01 c7 aa b5 00 83 e9 22 c7 a8 f9 40) trailer=43 04 term=0x7e syscall_len=18
+02:11:35.896690 mcu->host DevicePeriodicStatus len=14 seq=0x1d opcode=0x43 data=UnknownPayload(payload=1b cd fc 83 00 81 d7 4f) trailer=a5 2c term=0x7e syscall_len=14
+02:11:35.966761 mcu->host DevicePeriodicStatus len=14 seq=0x1d opcode=0x43 data=UnknownPayload(payload=22 ce e2 c8 00 81 d8 0e) trailer=61 50 term=0x7e syscall_len=14
+02:11:36.030641 host->mcu HostMotionControl len=58 seq=0x1d opcode=0x17 data=UnknownPayload(payload=0d 83 9b f8 6f 01 00 17 10 83 9b f2 09 01 00 17 0d 80 fe 22 02 e4 38 17 10 80 fa 6f 03 e6 62 17 0d c8 7b 06 fa 65 17 10 c3 13 06 fa 7d 17 0d aa 69 0c ff 55) trailer=76 61 term=0x7e
+02:11:36.032525 mcu->host Unknown(0x77) len=5 seq=0x1e opcode=0x77 payload= raw=05 1e 77 ff 7e trailer=ff term=0x7e syscall_len=5
+02:11:36.033756 host->mcu HostMotionControl len=64 seq=0x1e opcode=0x17 data=UnknownPayload(payload=10 aa 58 0a ff 4c 17 10 a8 4d 11 00 17 0d a8 4f 10 00 17 0d ae 3a 10 81 34 17 10 ae 5f 10 81 30 17 0d ba 29 0a ff 40 17 10 ba 37 0a ff 3a 17 0d b6 6b 0b 1d 17 10 b7 24 0b 13) trailer=35 e0 term=0x7e syscall_len=64
+02:11:36.036354 mcu->host Unknown(0x66) len=5 seq=0x1f opcode=0x66 payload= raw=05 1f 66 76 7e trailer=76 term=0x7e syscall_len=5
+02:11:36.037454 host->mcu HostMotionControl len=35 seq=0x1f opcode=0x17 data=UnknownPayload(payload=0d c0 18 04 89 18 17 10 c2 67 04 87 1f 17 0d 80 ed 3b 02 b4 06 17 10 80 f3 07 02 b3 0f) trailer=bc 71 term=0x7e
+02:11:36.230449 host->mcu HostMotionControl len=60 seq=0x10 opcode=0x17 data=UnknownPayload(payload=0d 82 83 bc 27 01 00 17 10 82 83 bc 01 01 00 17 0d 81 93 7b 02 ff d3 3f 17 10 81 8e 6a 02 ff d7 17 17 0d cc 4f 06 f9 6f 17 10 cb 70 06 fa 06 17 0d ac 62 09 ff 15) trailer=67 7e term=0x7e syscall_len=60
+02:11:36.231944 mcu->host Unknown(0x8f) len=5 seq=0x11 opcode=0x8f payload= raw=05 11 8f 08 7e trailer=08 term=0x7e syscall_len=5
+02:11:36.232963 host->mcu HostMotionControl len=64 seq=0x11 opcode=0x17 data=UnknownPayload(payload=10 ac 1e 09 ff 29 17 0d a8 55 13 00 17 10 a8 48 13 00 17 0d ad 59 10 81 3a 17 10 ad 6e 10 81 39 17 0d bb 4a 08 ff 15 17 10 bb 23 09 ff 1f 17 0d b7 50 0d 00 17 10 b7 6a 0c 00) trailer=f1 ce term=0x7e syscall_len=64
+02:11:36.235343 mcu->host Unknown(0xbd) len=5 seq=0x12 opcode=0xbd payload= raw=05 12 bd 93 7e trailer=93 term=0x7e syscall_len=5
+02:11:36.238414 host->mcu HostMotionControl len=35 seq=0x12 opcode=0x17 data=UnknownPayload(payload=0d bf 57 04 88 10 17 10 bf 70 04 88 25 17 0d 80 e7 07 02 a9 0c 17 10 80 e8 2f 02 aa 7c) trailer=3b 98 term=0x7e syscall_len=35
+02:11:36.239869 mcu->host Unknown(0xac) len=5 seq=0x13 opcode=0xac payload= raw=05 13 ac 1a 7e trailer=1a term=0x7e syscall_len=5
+02:11:36.396718 mcu->host DevicePeriodicStatus len=14 seq=0x13 opcode=0x43 data=UnknownPayload(payload=1b d3 d8 b9 00 81 d7 4d) trailer=39 98 term=0x7e syscall_len=14
+02:11:36.402452 host->mcu HostPeriodicQuery len=6 seq=0x13 opcode=0x05 data=Empty trailer=07 be term=0x7e
+02:11:36.404013 mcu->host DeviceQueryResponse len=10 seq=0x14 opcode=0x3b data=UnknownPayload(payload=ce 8f eb 13) trailer=a7 62 term=0x7e syscall_len=15
+02:11:36.404013 mcu->host Unknown(0xd8) len=5 seq=0x14 opcode=0xd8 payload= raw=05 14 d8 a5 7e trailer=a5 term=0x7e syscall_len=15
+02:11:36.430473 host->mcu HostMotionControl len=60 seq=0x14 opcode=0x17 data=UnknownPayload(payload=0d 82 82 a1 3c 01 00 17 10 82 82 a9 54 01 00 17 0d 81 b9 4e 02 ff b5 5c 17 10 81 ae 52 02 ff be 6e 17 0d d0 37 05 f8 70 17 10 cf 31 05 f9 1d 17 0d af 29 08 fe 63) trailer=1f 85 term=0x7e
+02:11:36.432378 mcu->host Unknown(0xc9) len=5 seq=0x15 opcode=0xc9 payload= raw=05 15 c9 2c 7e trailer=2c term=0x7e syscall_len=5
+02:11:36.433345 host->mcu HostMotionControl len=64 seq=0x15 opcode=0x17 data=UnknownPayload(payload=10 ae 66 09 fe 74 17 0d a8 41 15 00 17 10 a8 4d 14 00 17 0d ad 1e 11 81 38 17 10 ad 26 11 81 38 17 0d b7 73 14 7d 17 10 b7 57 14 00 17 0d bd 42 04 88 06 17 10 bd 4f 04 88 1e) trailer=30 84 term=0x7e
+02:11:36.436230 host->mcu HostMotionControl len=35 seq=0x16 opcode=0x17 data=UnknownPayload(payload=0d 80 e1 2c 02 a2 29 17 10 80 e2 3a 02 a3 49 17 0d 81 e9 62 01 00 17 10 82 80 7f 01 00) trailer=50 f0 term=0x7e syscall_len=35
+02:11:36.437682 mcu->host Unknown(0xea) len=5 seq=0x17 opcode=0xea payload= raw=05 17 ea 3e 7e trailer=3e term=0x7e syscall_len=5
+02:11:36.446994 host->mcu HostAction len=14 seq=0x17 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b e8 ad ba 0a) trailer=52 d6 term=0x7e syscall_len=14
+02:11:36.448400 mcu->host Unknown(0x12) len=5 seq=0x18 opcode=0x12 payload= raw=05 18 12 c9 7e trailer=c9 term=0x7e syscall_len=5
+02:11:36.451539 mcu->host DeviceActionResponse len=18 seq=0x18 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 3a 02 08 a0 b5) trailer=98 6f term=0x7e syscall_len=18
+02:11:36.457634 host->mcu HostAction len=14 seq=0x18 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b 28 20 98 0a) trailer=27 c3 term=0x7e syscall_len=14
+02:11:36.461925 mcu->host DeviceActionResponse len=18 seq=0x19 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=07 9e term=0x7e syscall_len=18
+02:11:36.466725 mcu->host DevicePeriodicStatus len=14 seq=0x19 opcode=0x43 data=UnknownPayload(payload=22 d4 be fe 00 81 d8 10) trailer=ea 71 term=0x7e syscall_len=14
+02:11:36.493010 host->mcu HostAction len=14 seq=0x19 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 e8 ad e1 0a) trailer=be 52 term=0x7e syscall_len=14
+02:11:36.493618 mcu->host DeviceHomingAck len=5 seq=0x1a opcode=0x31 data=Empty trailer=db term=0x7e syscall_len=5
+02:11:36.507322 mcu->host DeviceActionResponse len=18 seq=0x1a opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d 80 26 02 08 20 8d) trailer=95 1d term=0x7e syscall_len=18
+02:11:36.523489 host->mcu HostAction len=14 seq=0x1a opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 28 20 c3 0a) trailer=12 f2 term=0x7e syscall_len=14
+02:11:36.524156 mcu->host Unknown(0x20) len=5 seq=0x1b opcode=0x20 payload= raw=05 1b 20 52 7e trailer=52 term=0x7e syscall_len=5
+02:11:36.527944 mcu->host DeviceActionResponse len=18 seq=0x1b opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=fa 4a term=0x7e syscall_len=18
+02:11:36.639821 host->mcu HostAction len=14 seq=0x1b opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b e8 2d 97 0a) trailer=a0 84 term=0x7e syscall_len=14
+02:11:36.641183 mcu->host Unknown(0x54) len=5 seq=0x1c opcode=0x54 payload= raw=05 1c 54 ed 7e trailer=ed term=0x7e syscall_len=5
+02:11:36.644069 mcu->host DeviceActionResponse len=18 seq=0x1c opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 26 02 08 20 86) trailer=27 72 term=0x7e syscall_len=18
+02:11:36.650624 host->mcu HostAction len=14 seq=0x1c opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b 28 a0 b5 0a) trailer=bc b8 term=0x7e syscall_len=14
+02:11:36.651233 mcu->host Unknown(0x45) len=5 seq=0x1d opcode=0x45 payload= raw=05 1d 45 64 7e trailer=64 term=0x7e syscall_len=5
+02:11:36.655025 mcu->host DeviceActionResponse len=18 seq=0x1d opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=f4 27 term=0x7e syscall_len=18
+02:11:36.710363 mcu->host DeviceSensorStatus len=13 seq=0x1d opcode=0x48 data=UnknownPayload(payload=00 d1 d4 b7 60 00 00) trailer=73 21 term=0x7e syscall_len=13
+02:11:36.740390 mcu->host DeviceSensorStatus len=13 seq=0x1d opcode=0x48 data=UnknownPayload(payload=03 d2 80 b0 60 00 00) trailer=d8 61 term=0x7e syscall_len=13
+02:11:36.809389 mcu->host DeviceSensorStatus len=18 seq=0x1d opcode=0x48 data=UnknownPayload(payload=01 d2 e4 dc 40 83 ec 68 d2 e1 e5 40) trailer=3d 3b term=0x7e syscall_len=18
+02:11:36.900528 mcu->host DevicePeriodicStatus len=14 seq=0x1d opcode=0x43 data=UnknownPayload(payload=1b d9 b4 ef 00 81 d7 52) trailer=41 fd term=0x7e syscall_len=14
+02:11:36.966706 mcu->host DevicePeriodicStatus len=14 seq=0x1d opcode=0x43 data=UnknownPayload(payload=22 da 9b b4 00 81 d8 0e) trailer=39 5e term=0x7e syscall_len=14
+02:11:36.981522 host->mcu HostMotionControl len=63 seq=0x1d opcode=0x17 data=UnknownPayload(payload=0d 86 b0 84 4c 01 00 17 10 86 af ec 5e 01 00 17 0d 80 f2 25 03 eb 3a 17 10 80 ef 7c 03 ec 53 17 0d be 7d 08 fc 37 17 10 be 1a 08 fc 4d 17 0d a8 49 19 00 17 10 a8 44 19 00) trailer=11 81 term=0x7e syscall_len=63
+02:11:36.983003 mcu->host Unknown(0x77) len=5 seq=0x1e opcode=0x77 payload= raw=05 1e 77 ff 7e trailer=ff term=0x7e syscall_len=5
+02:11:36.983961 host->mcu HostMotionControl len=59 seq=0x1e opcode=0x17 data=UnknownPayload(payload=0d ae 74 10 81 33 17 10 af 33 10 81 2b 17 0d b8 6a 11 6c 17 10 b9 0f 0f 65 17 10 b7 0b 06 80 68 17 0d b7 29 05 82 12 17 10 c2 3d 04 88 6b 17 0d c8 3b 03 8c 0c) trailer=6d ec term=0x7e syscall_len=59
+02:11:36.985913 mcu->host Unknown(0x66) len=5 seq=0x1f opcode=0x66 payload= raw=05 1f 66 76 7e trailer=76 term=0x7e syscall_len=5
+02:11:37.002212 host->mcu HostMotionControl len=21 seq=0x1f opcode=0x17 data=UnknownPayload(payload=0d 80 f4 1c 02 c4 5c 17 10 80 f9 4f 02 c6 72) trailer=ed 7d term=0x7e syscall_len=21
+02:11:37.003545 mcu->host Unknown(0x9e) len=5 seq=0x10 opcode=0x9e payload= raw=05 10 9e 81 7e trailer=81 term=0x7e syscall_len=5
+02:11:37.321764 host->mcu HostMotionControl len=58 seq=0x10 opcode=0x17 data=UnknownPayload(payload=0d 83 cf d5 3b 01 00 17 10 83 cf cf 40 01 00 17 0d 81 81 4b 02 e0 12 17 10 80 fc 51 02 e5 38 17 0d c9 26 06 fa 5c 17 10 c8 4d 06 fa 70 17 0d aa 77 0c ff 52) trailer=dc 34 term=0x7e syscall_len=58
+02:11:37.323748 mcu->host Unknown(0x8f) len=5 seq=0x11 opcode=0x8f payload= raw=05 11 8f 08 7e trailer=08 term=0x7e syscall_len=5
+02:11:37.324707 host->mcu HostMotionControl len=64 seq=0x11 opcode=0x17 data=UnknownPayload(payload=10 aa 55 0d ff 59 17 0d a8 53 10 00 17 10 a8 5a 0f 00 17 0d ae 2d 10 81 35 17 10 ae 3e 10 81 34 17 0d ba 3d 0a ff 3a 17 10 ba 13 0b ff 46 17 0d b7 1d 0b 14 17 10 b7 29 0a 17) trailer=3c c3 term=0x7e
+02:11:37.326566 mcu->host Unknown(0xbd) len=5 seq=0x12 opcode=0xbd payload= raw=05 12 bd 93 7e trailer=93 term=0x7e syscall_len=5
+02:11:37.339965 host->mcu HostMotionControl len=35 seq=0x12 opcode=0x17 data=UnknownPayload(payload=0d c0 1c 04 89 02 17 10 c2 12 04 87 44 17 0d 80 ec 65 02 b2 45 17 10 80 f1 53 02 b2 11) trailer=e7 28 term=0x7e syscall_len=35
+02:11:37.341506 mcu->host Unknown(0xac) len=5 seq=0x13 opcode=0xac payload= raw=05 13 ac 1a 7e trailer=1a term=0x7e syscall_len=5
+02:11:37.386806 host->mcu HostPeriodicQuery len=6 seq=0x13 opcode=0x05 data=Empty trailer=07 be term=0x7e syscall_len=6
+02:11:37.390706 mcu->host DeviceQueryResponse len=10 seq=0x14 opcode=0x3b data=UnknownPayload(payload=d9 b1 e1 76) trailer=6c 8c term=0x7e syscall_len=15
+02:11:37.390706 mcu->host Unknown(0xd8) len=5 seq=0x14 opcode=0xd8 payload= raw=05 14 d8 a5 7e trailer=a5 term=0x7e syscall_len=15
+02:11:37.396711 mcu->host DevicePeriodicStatus len=14 seq=0x14 opcode=0x43 data=UnknownPayload(payload=1b df 91 a5 00 81 d7 57) trailer=17 fe term=0x7e syscall_len=14
+02:11:37.448205 host->mcu HostAction len=14 seq=0x14 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b e8 ad ba 0a) trailer=26 bf term=0x7e syscall_len=14
+02:11:37.449686 mcu->host Unknown(0xc9) len=5 seq=0x15 opcode=0xc9 payload= raw=05 15 c9 2c 7e trailer=2c term=0x7e syscall_len=5
+02:11:37.459079 host->mcu HostAction len=14 seq=0x15 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b 28 20 98 0a) trailer=d2 51 term=0x7e syscall_len=14
+02:11:37.459627 mcu->host Unknown(0xfb) len=5 seq=0x16 opcode=0xfb payload= raw=05 16 fb b7 7e trailer=b7 term=0x7e syscall_len=5
+02:11:37.466155 mcu->host DeviceActionResponse len=18 seq=0x16 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=98 7a term=0x7e syscall_len=18
+02:11:37.470006 mcu->host DevicePeriodicStatus len=14 seq=0x16 opcode=0x43 data=UnknownPayload(payload=22 df f7 ea 00 81 d8 0e) trailer=76 22 term=0x7e syscall_len=14
+02:11:37.493410 host->mcu HostAction len=14 seq=0x16 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 e8 ad e1 0a) trailer=13 8e term=0x7e syscall_len=14
+02:11:37.494740 mcu->host Unknown(0xea) len=5 seq=0x17 opcode=0xea payload= raw=05 17 ea 3e 7e trailer=3e term=0x7e syscall_len=5
+02:11:37.512260 host->mcu HostAction len=14 seq=0x17 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 28 20 c3 0a) trailer=e7 60 term=0x7e syscall_len=14
+02:11:37.512829 mcu->host Unknown(0x12) len=5 seq=0x18 opcode=0x12 payload= raw=05 18 12 c9 7e trailer=c9 term=0x7e syscall_len=5
+02:11:37.517631 mcu->host DeviceActionResponse len=18 seq=0x18 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=79 74 term=0x7e syscall_len=18
+02:11:37.641808 host->mcu HostAction len=14 seq=0x18 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b e8 2d 97 0a) trailer=d4 ed term=0x7e syscall_len=14
+02:11:37.647789 mcu->host DeviceActionResponse len=18 seq=0x19 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d 80 26 02 08 20 8d) trailer=16 23 term=0x7e syscall_len=18
+02:11:37.660535 host->mcu HostMotionControl len=60 seq=0x19 opcode=0x17 data=UnknownPayload(payload=0d 83 9c 85 17 01 00 17 10 83 9c 85 45 01 00 17 0d 81 96 62 02 ff d1 3a 17 10 81 91 29 02 ff d5 33 17 0d cd 00 06 f9 62 17 10 cc 1f 06 f9 7b 17 0d ad 19 08 ff 03) trailer=36 d0 term=0x7e syscall_len=60
+02:11:37.662204 mcu->host DeviceHomingAck len=5 seq=0x1a opcode=0x31 data=Empty trailer=db term=0x7e syscall_len=5
+02:11:37.662948 host->mcu HostAction len=60 seq=0x1a opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b 28 a0 b5 0a 17 10 ac 3a 09 ff 21 17 0d a8 4a 14 00 17 10 a8 4d 13 00 17 0d ae 09 11 81 2f 17 10 ad 7f 10 81 35 17 10 bc 07 08 fe 7d 17 0d b7 50 14 00) trailer=d5 8c term=0x7e syscall_len=60
+02:11:37.666745 host->mcu HostMotionControl len=41 seq=0x1b opcode=0x17 data=UnknownPayload(payload=10 b7 66 0d 00 17 0d bf 31 04 88 17 17 10 bf 59 04 88 21 17 0d 80 e6 17 02 a8 3c 17 10 80 e7 51 02 aa 0b) trailer=2e 74 term=0x7e
+02:11:37.670356 mcu->host DeviceActionResponse len=18 seq=0x1c opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=8a cd term=0x7e syscall_len=18
+02:11:37.710952 mcu->host DeviceSensorStatus len=13 seq=0x1c opcode=0x48 data=UnknownPayload(payload=00 dd 8e 81 40 00 00) trailer=32 b1 term=0x7e syscall_len=13
+02:11:37.741019 mcu->host DeviceSensorStatus len=13 seq=0x1c opcode=0x48 data=UnknownPayload(payload=03 dd b9 fa 40 00 00) trailer=e4 82 term=0x7e syscall_len=13
+02:11:37.810771 mcu->host DeviceSensorStatus len=18 seq=0x1c opcode=0x48 data=UnknownPayload(payload=01 de 9f 84 00 83 f0 2f de 9d c8 40) trailer=33 80 term=0x7e syscall_len=18
+02:11:37.859763 host->mcu HostMotionControl len=60 seq=0x1c opcode=0x17 data=UnknownPayload(payload=0d 82 85 a0 40 01 00 17 10 82 85 aa 37 01 00 17 0d 81 c0 22 02 ff b0 02 17 10 81 b3 66 02 ff ba 4e 17 0d d0 6e 05 f8 62 17 10 cf 67 05 f9 0f 17 0d af 3c 08 fe 5f) trailer=91 63 term=0x7e syscall_len=60
+02:11:37.861328 mcu->host Unknown(0x45) len=5 seq=0x1d opcode=0x45 payload= raw=05 1d 45 64 7e trailer=64 term=0x7e syscall_len=5
+02:11:37.861952 host->mcu HostMotionControl len=64 seq=0x1d opcode=0x17 data=UnknownPayload(payload=10 ae 7b 09 fe 6f 17 0d a8 42 15 00 17 10 a8 4f 14 00 17 0d ad 09 11 81 3a 17 10 ad 22 11 81 38 17 0d b7 75 14 7d 17 10 b7 61 14 7f 17 0d bd 14 04 88 0d 17 10 bd 38 04 88 1a) trailer=cc 3d term=0x7e syscall_len=64
+02:11:37.862973 mcu->host Unknown(0x77) len=5 seq=0x1e opcode=0x77 payload= raw=05 1e 77 ff 7e trailer=ff term=0x7e syscall_len=5
+02:11:37.863802 host->mcu HostMotionControl len=35 seq=0x1e opcode=0x17 data=UnknownPayload(payload=0d 80 e0 6a 02 a1 59 17 10 80 e1 72 02 a2 78 17 0d 81 e1 1d 01 00 17 10 81 f4 02 01 00) trailer=57 ad term=0x7e syscall_len=35
+02:11:37.865590 mcu->host Unknown(0x66) len=5 seq=0x1f opcode=0x66 payload= raw=05 1f 66 76 7e trailer=76 term=0x7e syscall_len=5
+02:11:37.896709 mcu->host DevicePeriodicStatus len=15 seq=0x1f opcode=0x43 data=UnknownPayload(payload=1b 80 e4 ed db 00 81 d7 4e) trailer=6f 75 term=0x7e syscall_len=15
+02:11:37.966748 mcu->host DevicePeriodicStatus len=15 seq=0x1f opcode=0x43 data=UnknownPayload(payload=22 80 e5 d4 a0 00 81 d8 0c) trailer=98 58 term=0x7e syscall_len=15
+02:11:38.060172 host->mcu HostMotionControl len=63 seq=0x1f opcode=0x17 data=UnknownPayload(payload=0d 82 83 86 5e 01 00 17 10 82 82 f3 44 01 00 17 0d 80 f3 44 03 ea 60 17 10 80 f1 0a 03 ec 0f 17 0d bf 3f 07 fc 27 17 10 be 31 08 fc 4c 17 0d a8 3d 1a 00 17 10 a8 43 19 00) trailer=a1 61 term=0x7e syscall_len=63
+02:11:38.061696 mcu->host Unknown(0x9e) len=5 seq=0x10 opcode=0x9e payload= raw=05 10 9e 81 7e trailer=81 term=0x7e syscall_len=5
+02:11:38.062601 host->mcu HostMotionControl len=59 seq=0x10 opcode=0x17 data=UnknownPayload(payload=0d af 1b 10 81 2c 17 10 af 1c 10 81 2e 17 0d b9 5d 0c ff 52 17 10 b8 76 10 6a 17 0d b7 26 09 20 17 10 b6 4b 05 81 46 17 0d c2 52 04 88 4f 17 10 bf 00 04 8b 21) trailer=41 80 term=0x7e syscall_len=59
+02:11:38.064380 mcu->host Unknown(0x8f) len=5 seq=0x11 opcode=0x8f payload= raw=05 11 8f 08 7e trailer=08 term=0x7e syscall_len=5
+02:11:38.065251 host->mcu HostMotionControl len=21 seq=0x11 opcode=0x17 data=UnknownPayload(payload=0d 80 f5 7c 02 bf 47 17 10 80 f5 12 02 c7 3a) trailer=ee e2 term=0x7e syscall_len=21
+02:11:38.066592 mcu->host Unknown(0xbd) len=5 seq=0x12 opcode=0xbd payload= raw=05 12 bd 93 7e trailer=93 term=0x7e syscall_len=5
+02:11:38.371619 host->mcu HostPeriodicQuery len=6 seq=0x12 opcode=0x05 data=Empty trailer=1e 66 term=0x7e
+02:11:38.373770 mcu->host DeviceQueryResponse len=11 seq=0x13 opcode=0x3b data=UnknownPayload(payload=80 e4 d4 a7 0a) trailer=c1 42 term=0x7e syscall_len=16
+02:11:38.373770 mcu->host Unknown(0xac) len=5 seq=0x13 opcode=0xac payload= raw=05 13 ac 1a 7e trailer=1a term=0x7e syscall_len=16
+02:11:38.396828 mcu->host DevicePeriodicStatus len=15 seq=0x13 opcode=0x43 data=UnknownPayload(payload=1b 80 ea ca 91 00 81 d7 4c) trailer=3c 82 term=0x7e syscall_len=15
+02:11:38.449694 host->mcu HostAction len=14 seq=0x13 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b e8 ad ba 0a) trailer=e2 4a term=0x7e syscall_len=14
+02:11:38.450312 mcu->host Unknown(0xd8) len=5 seq=0x14 opcode=0xd8 payload= raw=05 14 d8 a5 7e trailer=a5 term=0x7e syscall_len=5
+02:11:38.454009 mcu->host DeviceActionResponse len=18 seq=0x14 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 3a 02 08 a0 b5) trailer=84 b5 term=0x7e syscall_len=18
+02:11:38.460152 host->mcu HostAction len=14 seq=0x14 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 0b 28 20 98 0a) trailer=fe 76 term=0x7e syscall_len=14
+02:11:38.460715 mcu->host Unknown(0xc9) len=5 seq=0x15 opcode=0xc9 payload= raw=05 15 c9 2c 7e trailer=2c term=0x7e syscall_len=5
+02:11:38.474394 mcu->host DeviceActionResponse len=18 seq=0x15 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa 2f 20 80 00 02 08 a0 89) trailer=1b 44 term=0x7e syscall_len=18
+02:11:38.476631 mcu->host DevicePeriodicStatus len=15 seq=0x15 opcode=0x43 data=UnknownPayload(payload=22 80 eb b0 d6 00 81 d8 0c) trailer=b0 87 term=0x7e syscall_len=15
+02:11:38.494422 host->mcu HostAction len=14 seq=0x15 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 e8 ad e1 0a) trailer=67 e7 term=0x7e syscall_len=14
+02:11:38.495784 mcu->host Unknown(0xfb) len=5 seq=0x16 opcode=0xfb payload= raw=05 16 fb b7 7e trailer=b7 term=0x7e syscall_len=5
+02:11:38.498755 mcu->host DeviceActionResponse len=18 seq=0x16 opcode=0x46 data=UnknownPayload(payload=0c 0a 0a fa ef 2d c0 26 02 08 20 86) trailer=35 c5 term=0x7e syscall_len=18
+02:11:38.517808 host->mcu HostAction len=14 seq=0x16 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 03 28 20 c3 0a) trailer=cb 47 term=0x7e syscall_len=14
+02:11:38.518447 mcu->host Unknown(0xea) len=5 seq=0x17 opcode=0xea payload= raw=05 17 ea 3e 7e trailer=3e term=0x7e syscall_len=5
+02:11:38.641817 host->mcu HostAction len=14 seq=0x17 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b e8 2d 97 0a) trailer=79 31 term=0x7e syscall_len=14
+02:11:38.652233 host->mcu HostAction len=14 seq=0x18 opcode=0x2a data=UnknownPayload(payload=0c 05 ea 1b 28 a0 b5 0a) trailer=0c 24 term=0x7e syscall_len=14
+02:11:38.653875 mcu->host Unknown(0x03) len=5 seq=0x19 opcode=0x03 payload= raw=05 19 03 40 7e trailer=40 term=0x7e syscall_len=5
+02:11:38.711453 mcu->host DeviceSensorStatus len=14 seq=0x19 opcode=0x48 data=UnknownPayload(payload=00 80 e8 c7 cb 20 00 00) trailer=11 09 term=0x7e syscall_len=14
+02:11:38.741433 mcu->host DeviceSensorStatus len=14 seq=0x19 opcode=0x48 data=UnknownPayload(payload=03 80 e8 f3 c4 20 00 00) trailer=d0 e1 term=0x7e syscall_len=14
+02:11:38.811435 mcu->host DeviceSensorStatus len=20 seq=0x19 opcode=0x48 data=UnknownPayload(payload=01 80 e9 d9 ab 40 83 f3 76 80 e9 d7 f0 00) trailer=06 0b term=0x7e syscall_len=20
+02:11:38.905369 mcu->host DevicePeriodicStatus len=15 seq=0x19 opcode=0x43 data=UnknownPayload(payload=1b 80 f0 a6 c7 00 81 d7 55) trailer=02 6b term=0x7e syscall_len=15
