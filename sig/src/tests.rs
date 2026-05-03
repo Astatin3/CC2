@@ -74,3 +74,27 @@ fn decrypts_ota_package_list_fixture() {
 
     assert_eq!(actual, EXPECTED_OTA_PACKAGE_LIST);
 }
+
+/// Encrypting plaintext with this tool should produce a `.sig` package that the
+/// same unpacking path can decrypt back to the original bytes.
+#[test]
+fn encrypts_ota_package_list_fixture() {
+    let encrypted = super::crypto::pack_sig_with_template(
+        EXPECTED_OTA_PACKAGE_LIST,
+        "ota-package-list.json",
+        ENCRYPTED_OTA_PACKAGE_LIST,
+    )
+    .expect("failed to pack embedded plaintext fixture");
+
+    assert_eq!(encrypted.len(), ENCRYPTED_OTA_PACKAGE_LIST.len());
+    if let Some(index) = encrypted
+        .iter()
+        .zip(ENCRYPTED_OTA_PACKAGE_LIST)
+        .position(|(actual, expected)| actual != expected)
+    {
+        panic!(
+            "encrypted fixture differs at byte {index}: actual=0x{:02x}, expected=0x{:02x}",
+            encrypted[index], ENCRYPTED_OTA_PACKAGE_LIST[index]
+        );
+    }
+}

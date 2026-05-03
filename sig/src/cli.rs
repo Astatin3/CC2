@@ -24,13 +24,16 @@ pub struct Cli {
 
 /// Supported subcommands.
 ///
-/// The tool currently has one operation: `strip`. The enum layout leaves room
-/// for future package inspection, signing, or repacking commands without
-/// changing the top-level parser API.
+/// The tool currently supports unpacking and re-encrypting package payloads.
+/// The enum layout leaves room for future package inspection, signing, or
+/// repacking commands without changing the top-level parser API.
 #[derive(Subcommand)]
 pub enum Command {
     /// Strip the .sig wrapper and write the unpacked payload.
     Strip(StripArgs),
+
+    /// Encrypt a file and wrap it in a .sig container.
+    Encrypt(EncryptArgs),
 }
 
 /// Arguments accepted by the `strip` subcommand.
@@ -54,4 +57,45 @@ pub struct StripArgs {
     /// `update.swu`.
     #[arg(short, long)]
     pub output: Option<PathBuf>,
+}
+
+/// Arguments accepted by the `encrypt` subcommand.
+///
+/// This command performs the inverse of `strip` for the subset of the format the
+/// tool understands: it encrypts a plaintext payload with the Carbon 2 AES key,
+/// writes a 512-byte `.sig` header, and appends the ciphertext. It does not yet
+/// create or verify any vendor signature material beyond the metadata needed for
+/// decryption.
+#[derive(Args)]
+pub struct EncryptArgs {
+    /// Input plaintext package file.
+    ///
+    /// The bytes are copied into the encrypted payload with PKCS#7 padding. The
+    /// original unpadded length is stored in the header so `strip` can recover
+    /// the exact input bytes.
+    pub input: PathBuf,
+
+    /// Output `.sig` path.
+    ///
+    /// When omitted, the command appends `.sig` to the input filename. For
+    /// example, `update.swu` writes `update.swu.sig`.
+    #[arg(short, long)]
+    pub output: Option<PathBuf>,
+
+    /// Filename to store inside the `.sig` header.
+    ///
+    /// Defaults to the input file name. The `.sig` format reserves 48 bytes for
+    /// this field, so values longer than 47 bytes are rejected to preserve the
+    /// trailing NUL terminator used by existing packages.
+    #[arg(long)]
+    pub filename: Option<String>,
+
+    /// Existing `.sig` file whose header metadata should be reused.
+    ///
+    /// Use this when you need reproducible output that can match an existing
+    /// encrypted package byte-for-byte. The command reuses the template IV and
+    /// opaque header metadata, then rewrites size, filename, and payload hash
+    /// fields for the new encrypted payload.
+    #[arg(long)]
+    pub template: Option<PathBuf>,
 }
