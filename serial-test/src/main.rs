@@ -125,18 +125,49 @@ fn log_packet(packet: &TracePacket) {
             .unwrap_or_default();
 
         println!(
-            "{timestamp} {} {} len={} seq=0x{:02x} opcode=0x{:02x} {} trailer={} term=0x{:02x}{}",
+            "{timestamp} {} {} len={} seq=0x{:02x} message_id={} {} crc={} computed_crc={} crc_ok={} term=0x{:02x} messages={}{}",
             packet.direction,
             frame.command,
             frame.len,
             frame.seq,
-            frame.opcode,
+            message_id(&frame),
             command_data(&frame),
             hex_bytes(&frame.trailer),
+            hex_bytes(&frame.computed_crc),
+            frame.crc_valid,
             frame.terminator,
+            format_messages(&frame),
             result
         );
     }
+}
+
+fn message_id(frame: &McuFrame) -> String {
+    frame
+        .message_id
+        .map(|message_id| format!("0x{message_id:02x}"))
+        .unwrap_or_else(|| "-".to_string())
+}
+
+fn format_messages(frame: &McuFrame) -> String {
+    if frame.messages.is_empty() {
+        return "[]".to_string();
+    }
+
+    let messages = frame
+        .messages
+        .iter()
+        .map(|message| {
+            format!(
+                "{{id=0x{:02x}, payload={}}}",
+                message.message_id,
+                hex_bytes(&message.payload)
+            )
+        })
+        .collect::<Vec<_>>()
+        .join(", ");
+
+    format!("[{messages}]")
 }
 
 fn command_data(frame: &McuFrame) -> String {
@@ -154,8 +185,8 @@ fn command_data(frame: &McuFrame) -> String {
         McuCommand::DeviceSensorStatus(data) => format!("data={data}"),
         McuCommand::TransportAck(data) => format!("crc={}", hex_bytes(&data.crc)),
         McuCommand::Unknown(_) => format!(
-            "payload={} raw={}",
-            hex_bytes(&frame.body),
+            "content={} raw={}",
+            hex_bytes(&frame.content),
             hex_bytes(&frame.raw)
         ),
         McuCommand::MalformedFrame => format!("raw={}", hex_bytes(&frame.raw)),

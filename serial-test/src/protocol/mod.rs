@@ -66,8 +66,8 @@ pub struct TransportAckData {
 }
 
 impl McuCommand {
-    fn from_parts(direction: Direction, opcode: u8, body: &[u8]) -> Self {
-        match (direction, opcode) {
+    fn from_parts(direction: Direction, message_id: u8, body: &[u8]) -> Self {
+        match (direction, message_id) {
             (Direction::HostWrite, 0x05) => {
                 Self::HostPeriodicQuery(HostPeriodicQueryData::from_body(body))
             }
@@ -99,7 +99,7 @@ impl McuCommand {
             (Direction::DeviceRead, 0x48) => {
                 Self::DeviceSensorStatus(DeviceSensorStatusData::from_body(body))
             }
-            _ => Self::Unknown(opcode),
+            _ => Self::Unknown(message_id),
         }
     }
 }
@@ -129,12 +129,22 @@ impl fmt::Display for McuCommand {
 pub struct McuFrame {
     pub len: u8,
     pub seq: u8,
-    pub opcode: u8,
+    pub message_id: Option<u8>,
     pub command: McuCommand,
+    pub messages: Vec<KlipperMessage>,
+    pub content: Vec<u8>,
     pub body: Vec<u8>,
     pub trailer: Vec<u8>,
+    pub computed_crc: Vec<u8>,
+    pub crc_valid: bool,
     pub terminator: u8,
     pub raw: Vec<u8>,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct KlipperMessage {
+    pub message_id: u8,
+    pub payload: Vec<u8>,
 }
 
 impl McuFrame {
@@ -146,10 +156,14 @@ impl McuFrame {
             return Self {
                 len: bytes.first().copied().unwrap_or(0),
                 seq: bytes.get(1).copied().unwrap_or(0),
-                opcode: bytes.get(2).copied().unwrap_or(0),
+                message_id: bytes.get(2).copied(),
                 command: McuCommand::MalformedFrame,
+                messages: Vec::new(),
+                content: Vec::new(),
                 body: Vec::new(),
                 trailer: Vec::new(),
+                computed_crc: Vec::new(),
+                crc_valid: false,
                 terminator: bytes.last().copied().unwrap_or(0),
                 raw: bytes.to_vec(),
             };
@@ -159,28 +173,40 @@ impl McuFrame {
         let seq = bytes[1];
         let trailer_len = 2;
         let body_end = bytes.len() - trailer_len - 1;
-        let opcode = if body_end > 2 { bytes[2] } else { 0 };
-        let body = if body_end > 3 {
-            bytes[3..body_end].to_vec()
+        let content = bytes[2..body_end].to_vec();
+        let trailer = bytes[body_end..bytes.len() - 1].to_vec();
+        let computed_crc = crc16_ccitt_klipper(&bytes[..body_end])
+            .to_be_bytes()
+            .to_vec();
+        let crc_valid = trailer == computed_crc;
+        let messages = parse_klipper_messages(&content);
+        let message_id = messages.first().map(|message| message.message_id);
+        let body = if content.len() > 1 {
+            content[1..].to_vec()
         } else {
             Vec::new()
         };
-        let trailer = bytes[body_end..bytes.len() - 1].to_vec();
         let command = if body_end == 2 {
             McuCommand::TransportAck(TransportAckData {
                 crc: trailer.clone(),
             })
+        } else if let Some(message_id) = message_id {
+            McuCommand::from_parts(direction, message_id, &body)
         } else {
-            McuCommand::from_parts(direction, opcode, &body)
+            McuCommand::MalformedFrame
         };
 
         Self {
             len,
             seq,
-            opcode,
+            message_id,
             command,
+            messages,
+            content,
             body,
             trailer,
+            computed_crc,
+            crc_valid,
             terminator: 0x7e,
             raw: bytes.to_vec(),
         }
@@ -217,6 +243,73 @@ pub fn hex_bytes(bytes: &[u8]) -> String {
         .join(" ")
 }
 
+pub fn crc16_ccitt_klipper(bytes: &[u8]) -> u16 {
+    let mut crc = 0xffffu16;
+
+    for byte in bytes {
+        crc ^= *byte as u16;
+        for _ in 0..8 {
+            if crc & 1 != 0 {
+                crc = (crc >> 1) ^ 0x8408;
+            } else {
+                crc >>= 1;
+            }
+        }
+    }
+
+    crc
+}
+
+pub fn parse_klipper_messages(content: &[u8]) -> Vec<KlipperMessage> {
+    if content.is_empty() {
+        return Vec::new();
+    }
+
+    let mut messages = Vec::new();
+    let mut start = 0;
+
+    for index in 1..content.len() {
+        if is_observed_message_id(content[index]) {
+            messages.push(KlipperMessage {
+                message_id: content[start],
+                payload: content[start + 1..index].to_vec(),
+            });
+            start = index;
+        }
+    }
+
+    messages.push(KlipperMessage {
+        message_id: content[start],
+        payload: content[start + 1..].to_vec(),
+    });
+
+    messages
+}
+
+fn is_observed_message_id(byte: u8) -> bool {
+    matches!(
+        byte,
+        0x17 | 0x18
+            | 0x19
+            | 0x1a
+            | 0x1d
+            | 0x1e
+            | 0x20
+            | 0x21
+            | 0x22
+            | 0x28
+            | 0x2a
+            | 0x3b
+            | 0x3d
+            | 0x40
+            | 0x41
+            | 0x42
+            | 0x43
+            | 0x46
+            | 0x48
+    )
+}
+
 #[cfg(test)]
 mod tests {
     use super::*;
@@ -231,8 +324,9 @@ mod tests {
             McuCommand::HostPeriodicQuery(HostPeriodicQueryData::Empty)
         );
         assert_eq!(frame.seq, 0x14);
-        assert_eq!(frame.opcode, 0x05);
+        assert_eq!(frame.message_id, Some(0x05));
         assert_eq!(frame.trailer, [0x4a, 0xb6]);
+        assert!(frame.crc_valid);
     }
 
     #[test]
@@ -253,7 +347,27 @@ mod tests {
                 crc: vec![0xc9, 0x2c]
             })
         );
-        assert_eq!(ack.opcode, 0);
+        assert_eq!(ack.message_id, None);
+        assert!(ack.crc_valid);
+    }
+
+    #[test]
+    fn validates_klipper_crc_vectors() {
+        assert_eq!(crc16_ccitt_klipper(&[0x05, 0x10]), 0x9e81);
+        assert_eq!(crc16_ccitt_klipper(&[0x05, 0x1f]), 0x6676);
+        assert_eq!(crc16_ccitt_klipper(&[0x06, 0x14, 0x05]), 0x4ab6);
+    }
+
+    #[test]
+    fn extracts_observed_encoded_messages() {
+        let content = [
+            0x2a, 0x0c, 0x05, 0xea, 0x03, 0xe8, 0xad, 0xe1, 0x0a, 0x17, 0x10,
+        ];
+        let messages = parse_klipper_messages(&content);
+
+        assert_eq!(messages.len(), 2);
+        assert_eq!(messages[0].message_id, 0x2a);
+        assert_eq!(messages[1].message_id, 0x17);
     }
 
     #[test]
@@ -270,5 +384,6 @@ mod tests {
         assert!(matches!(frame.command, McuCommand::HostMotionProgram(_)));
         assert_eq!(frame.body[0], 0x13);
         assert_eq!(frame.trailer, [0x53, 0x10]);
+        assert!(frame.crc_valid);
     }
 }
