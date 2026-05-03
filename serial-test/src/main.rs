@@ -143,6 +143,7 @@ fn command_data(frame: &McuFrame) -> String {
     match &frame.command {
         McuCommand::HostPeriodicQuery(data) => format!("data={data}"),
         McuCommand::HostMotionControl(data) => format!("data={data}"),
+        McuCommand::HostMotionProgram(data) => format!("data={data}"),
         McuCommand::HostControlResponse(data) => format!("data={data}"),
         McuCommand::HostAction(data) => format!("data={data}"),
         McuCommand::DeviceQueryResponse(data) => format!("data={data}"),
@@ -151,6 +152,7 @@ fn command_data(frame: &McuFrame) -> String {
         McuCommand::DevicePeriodicStatus(data) => format!("data={data}"),
         McuCommand::DeviceActionResponse(data) => format!("data={data}"),
         McuCommand::DeviceSensorStatus(data) => format!("data={data}"),
+        McuCommand::TransportAck(data) => format!("crc={}", hex_bytes(&data.crc)),
         McuCommand::Unknown(_) => format!(
             "payload={} raw={}",
             hex_bytes(&frame.body),

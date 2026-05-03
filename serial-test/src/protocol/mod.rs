@@ -7,7 +7,9 @@ mod device_sensor_status;
 mod host_action;
 mod host_control_response;
 mod host_motion_control;
+mod host_motion_program;
 mod host_periodic_query;
+pub mod motion;
 
 use std::fmt;
 
@@ -20,6 +22,7 @@ pub use device_sensor_status::DeviceSensorStatusData;
 pub use host_action::HostActionData;
 pub use host_control_response::HostControlResponseData;
 pub use host_motion_control::HostMotionControlData;
+pub use host_motion_program::HostMotionProgramData;
 pub use host_periodic_query::HostPeriodicQueryData;
 
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
@@ -43,6 +46,7 @@ impl fmt::Display for Direction {
 pub enum McuCommand {
     HostPeriodicQuery(HostPeriodicQueryData),
     HostMotionControl(HostMotionControlData),
+    HostMotionProgram(HostMotionProgramData),
     HostControlResponse(HostControlResponseData),
     HostAction(HostActionData),
     DeviceQueryResponse(DeviceQueryResponseData),
@@ -51,8 +55,14 @@ pub enum McuCommand {
     DevicePeriodicStatus(DevicePeriodicStatusData),
     DeviceActionResponse(DeviceActionResponseData),
     DeviceSensorStatus(DeviceSensorStatusData),
+    TransportAck(TransportAckData),
     Unknown(u8),
     MalformedFrame,
+}
+
+#[derive(Debug, Clone, PartialEq, Eq)]
+pub struct TransportAckData {
+    pub crc: Vec<u8>,
 }
 
 impl McuCommand {
@@ -63,6 +73,9 @@ impl McuCommand {
             }
             (Direction::HostWrite, 0x17) => {
                 Self::HostMotionControl(HostMotionControlData::from_body(body))
+            }
+            (Direction::HostWrite, 0x18) => {
+                Self::HostMotionProgram(HostMotionProgramData::from_body(body))
             }
             (Direction::HostWrite, 0x21) => {
                 Self::HostControlResponse(HostControlResponseData::from_body(body))
@@ -96,6 +109,7 @@ impl fmt::Display for McuCommand {
         match self {
             Self::HostPeriodicQuery(_) => f.write_str("HostPeriodicQuery"),
             Self::HostMotionControl(_) => f.write_str("HostMotionControl"),
+            Self::HostMotionProgram(_) => f.write_str("HostMotionProgram"),
             Self::HostControlResponse(_) => f.write_str("HostControlResponse"),
             Self::HostAction(_) => f.write_str("HostAction"),
             Self::DeviceQueryResponse(_) => f.write_str("DeviceQueryResponse"),
@@ -104,6 +118,7 @@ impl fmt::Display for McuCommand {
             Self::DevicePeriodicStatus(_) => f.write_str("DevicePeriodicStatus"),
             Self::DeviceActionResponse(_) => f.write_str("DeviceActionResponse"),
             Self::DeviceSensorStatus(_) => f.write_str("DeviceSensorStatus"),
+            Self::TransportAck(_) => f.write_str("TransportAck"),
             Self::Unknown(opcode) => write!(f, "Unknown(0x{opcode:02x})"),
             Self::MalformedFrame => f.write_str("MalformedFrame"),
         }
@@ -142,12 +157,22 @@ impl McuFrame {
 
         let len = bytes[0];
         let seq = bytes[1];
-        let opcode = bytes[2];
-        let trailer_len = if bytes.len() >= 6 { 2 } else { 1 };
+        let trailer_len = 2;
         let body_end = bytes.len() - trailer_len - 1;
-        let body = bytes[3..body_end].to_vec();
+        let opcode = if body_end > 2 { bytes[2] } else { 0 };
+        let body = if body_end > 3 {
+            bytes[3..body_end].to_vec()
+        } else {
+            Vec::new()
+        };
         let trailer = bytes[body_end..bytes.len() - 1].to_vec();
-        let command = McuCommand::from_parts(direction, opcode, &body);
+        let command = if body_end == 2 {
+            McuCommand::TransportAck(TransportAckData {
+                crc: trailer.clone(),
+            })
+        } else {
+            McuCommand::from_parts(direction, opcode, &body)
+        };
 
         Self {
             len,
@@ -221,10 +246,18 @@ mod tests {
         assert_eq!(frames.len(), 2);
         assert_eq!(frames[0].len(), 11);
         assert_eq!(frames[1].len(), 5);
+        let ack = McuFrame::parse(Direction::DeviceRead, frames[1]);
+        assert_eq!(
+            ack.command,
+            McuCommand::TransportAck(TransportAckData {
+                crc: vec![0xc9, 0x2c]
+            })
+        );
+        assert_eq!(ack.opcode, 0);
     }
 
     #[test]
-    fn unknown_command_keeps_only_unknown_payload() {
+    fn host_motion_program_decodes_opcode_18() {
         let bytes = [
             0x3a, 0x10, 0x18, 0x13, 0x00, 0x17, 0x13, 0x80, 0xf0, 0xe0, 0x82, 0x65, 0x01, 0x00,
             0x17, 0x13, 0x83, 0xb0, 0x5c, 0x02, 0xff, 0x8f, 0x3a, 0x17, 0x13, 0x82, 0x81, 0x71,
@@ -234,7 +267,7 @@ mod tests {
         ];
         let frame = McuFrame::parse(Direction::HostWrite, &bytes);
 
-        assert_eq!(frame.command, McuCommand::Unknown(0x18));
+        assert!(matches!(frame.command, McuCommand::HostMotionProgram(_)));
         assert_eq!(frame.body[0], 0x13);
         assert_eq!(frame.trailer, [0x53, 0x10]);
     }
