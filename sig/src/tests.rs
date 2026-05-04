@@ -83,6 +83,7 @@ fn encrypts_ota_package_list_fixture() {
         EXPECTED_OTA_PACKAGE_LIST,
         "ota-package-list.json",
         ENCRYPTED_OTA_PACKAGE_LIST,
+        None,
     )
     .expect("failed to pack embedded plaintext fixture");
 

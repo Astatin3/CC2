@@ -8,4 +8,5 @@ aes = "0.8.4"
 cbc = "0.1.2"
 clap = { version = "4.5.37", features = ["derive"] }
 rand = "0.8.5"
-sha2 = "0.10.9"
+rsa = "0.9.8"
+sha2 = { version = "0.10.9", features = ["oid"] }

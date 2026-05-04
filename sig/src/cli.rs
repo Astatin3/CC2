@@ -29,21 +29,37 @@ pub struct Cli {
 /// repacking commands without changing the top-level parser API.
 #[derive(Subcommand)]
 pub enum Command {
-    /// Strip the .sig wrapper and write the unpacked payload.
-    Strip(StripArgs),
+    /// Unpack the .sig wrapper and write the contained payload.
+    #[command(alias = "strip")]
+    Unpack(UnpackArgs),
 
-    /// Encrypt a file and wrap it in a .sig container.
-    Encrypt(EncryptArgs),
+    /// Print parsed .sig header information.
+    Info(InfoArgs),
+
+    /// Repack a file into a signed .sig container.
+    #[command(alias = "encrypt")]
+    Repack(RepackArgs),
 }
 
-/// Arguments accepted by the `strip` subcommand.
+/// Arguments accepted by the `info` subcommand.
+#[derive(Args)]
+pub struct InfoArgs {
+    /// Input `.sig` file to inspect.
+    pub input: PathBuf,
+
+    /// Print exact hex bytes for unknown/reserved header regions.
+    #[arg(long)]
+    pub raw: bool,
+}
+
+/// Arguments accepted by the `unpack` subcommand.
 ///
 /// The command mirrors the browser-based unpacker at
 /// <https://docs.opencentauri.cc/extras/cc2_update_decrypt.html>: read a `.sig`
 /// file, remove the header, decrypt the payload when needed, trim it to the
 /// payload size declared in the header, then write the resulting package bytes.
 #[derive(Args)]
-pub struct StripArgs {
+pub struct UnpackArgs {
     /// Input `.sig` file.
     ///
     /// The file must begin with the Centauri/Elegoo `ELEG` magic value and must
@@ -59,20 +75,19 @@ pub struct StripArgs {
     pub output: Option<PathBuf>,
 }
 
-/// Arguments accepted by the `encrypt` subcommand.
+/// Arguments accepted by the `repack` subcommand.
 ///
-/// This command performs the inverse of `strip` for the subset of the format the
-/// tool understands: it encrypts a plaintext payload with the Carbon 2 AES key,
-/// writes a 512-byte `.sig` header, and appends the ciphertext. It does not yet
-/// create or verify any vendor signature material beyond the metadata needed for
-/// decryption.
+/// This command performs the inverse of `unpack`: it writes a 512-byte `.sig`
+/// header, signs the payload hash, and appends either plaintext or encrypted
+/// payload bytes. When a template is supplied, unknown header metadata and the
+/// template encryption mode are preserved by default.
 #[derive(Args)]
-pub struct EncryptArgs {
+pub struct RepackArgs {
     /// Input plaintext package file.
     ///
-    /// The bytes are copied into the encrypted payload with PKCS#7 padding. The
-    /// original unpadded length is stored in the header so `strip` can recover
-    /// the exact input bytes.
+    /// With `--encrypt`, the bytes are copied into the encrypted payload with
+    /// PKCS#7 padding. The original unpadded length is stored in the header so
+    /// `unpack` can recover the exact input bytes.
     pub input: PathBuf,
 
     /// Output `.sig` path.
@@ -82,9 +97,18 @@ pub struct EncryptArgs {
     #[arg(short, long)]
     pub output: Option<PathBuf>,
 
-    /// Filename to store inside the `.sig` header.
+    /// Encrypt the payload before writing it.
     ///
-    /// Defaults to the input file name. The `.sig` format reserves 48 bytes for
+    /// Without a template, repack writes a plain signed `.sig` unless this flag
+    /// is set. With a template, the command preserves the template encryption
+    /// mode unless this flag is set, in which case output is encrypted.
+    #[arg(long)]
+    pub encrypt: bool,
+
+    /// Override the filename stored inside the `.sig` header.
+    ///
+    /// Defaults to the template header filename when `--template` is provided,
+    /// otherwise to the input file name. The `.sig` format reserves 48 bytes for
     /// this field, so values longer than 47 bytes are rejected to preserve the
     /// trailing NUL terminator used by existing packages.
     #[arg(long)]
@@ -94,8 +118,7 @@ pub struct EncryptArgs {
     ///
     /// Use this when you need reproducible output that can match an existing
     /// encrypted package byte-for-byte. The command reuses the template IV and
-    /// opaque header metadata, then rewrites size, filename, and payload hash
-    /// fields for the new encrypted payload.
+    /// metadata, then rewrites size, filename, payload hash, and RSA signature.
     #[arg(long)]
     pub template: Option<PathBuf>,
 }
