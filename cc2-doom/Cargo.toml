@@ -1,0 +1,15 @@
+[package]
+name = "cc2-doom"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+libc = "0.2.177"
+memmap2 = "0.9.10"
+
+[target.'cfg(all(target_os = "linux", target_arch = "x86_64"))'.dependencies]
+pixels = "0.15.0"
+winit = "0.29.15"
+
+[build-dependencies]
+cc = "1.2.43"
