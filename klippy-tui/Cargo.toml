@@ -1,5 +1,5 @@
 [package]
-name = "klippy-test"
+name = "klippy-tui"
 version = "0.1.0"
 edition = "2024"
 
